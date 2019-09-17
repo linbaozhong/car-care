@@ -6,7 +6,7 @@
 </template>
 
 <script>
-	let context;
+	let ctx;
 	export default {
 		props: {
 			width: {
@@ -32,27 +32,8 @@
 			};
 		},
 		onReady() {
-			// this._resetCanvas()
-			const ctx = uni.createCanvasContext('firstCanvas')
-			// begin path
-			ctx.rect(10, 10, 100, 30)
-			ctx.setFillStyle('yellow')
-			ctx.fill()
-			
-			// begin another path
-			ctx.beginPath()
-			ctx.rect(10, 40, 100, 30)
-			
-			// only fill this rect, not in current path
-			ctx.setFillStyle('blue')
-			ctx.fillRect(10, 70, 100, 30)
-			
-			ctx.rect(10, 100, 100, 30)
-			
-			// it will fill current path
-			ctx.setFillStyle('red')
-			ctx.fill()
-			ctx.draw()
+			ctx = uni.createCanvasContext('firstCanvas')
+			this._resetCanvas()
 		},
 		methods: {
 			onTouchstart(e) {
@@ -83,19 +64,18 @@
 			// Render the signature to the canvas
 			_renderCanvas() {
 				if (this.drawing) {
-					context.setStrokeStyle("#ff0000")
-					context.setLineWidth(5)
-					context.moveTo(this.lastPos.x, this.lastPos.y)
-					context.lineTo(this.currentPos.x, this.currentPos.y)
-					context.stroke()
-					context.draw()
+					ctx.moveTo(this.lastPos.x, this.lastPos.y)
+					ctx.lineTo(this.currentPos.x, this.currentPos.y)
+					ctx.stroke()
+					ctx.draw(true)
 					this.lastPos = this.currentPos;
 				}
 			},
 			// Reset the canvas context
 			_resetCanvas() {
-
-
+				// ctx = uni.createCanvasContext('firstCanvas')
+				ctx.setStrokeStyle("#ff0000")
+				ctx.setLineWidth(5)
 			},
 			canvasIdErrorCallback: function(e) {
 				console.error(e.detail.errMsg)
