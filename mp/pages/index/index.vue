@@ -94,6 +94,9 @@
 					}
 				})
 			},
+			canvasIdErrorCallback: function(e) {
+				console.error(e.detail.errMsg)
+			}
 		}
 	}
 </script>
@@ -146,7 +149,6 @@
 			}
 		}
 	}
-
 	.services {
 		margin: 20upx 0;
 		padding: 20upx;
