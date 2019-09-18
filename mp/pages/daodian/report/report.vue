@@ -24,6 +24,7 @@
 
 <script>
 	import uniPopup from '@/components/uni-popup/uni-popup.vue'
+
 	let signature = {
 		ctx: null,
 		drawing: false,
@@ -36,6 +37,8 @@
 			y: 0
 		},
 	}
+
+
 	export default {
 		components: {
 			uniPopup,
@@ -75,13 +78,12 @@
 			},
 			onTouchstart(e) {
 				signature.drawing = true;
-				signature.lastPos = this._getPosition(e)
-				signature.currentPos = this._getPosition(e)
+				signature.lastPos = signature.currentPos = this._getPosition(e)
 				this._renderCanvas()
 			},
-			onTouchmove(e) {
+			async onTouchmove(e) {
 				signature.currentPos = this._getPosition(e)
-				this._renderCanvas()
+				await this._renderCanvas()
 			},
 			onTouchend(e) {
 				signature.drawing = false
@@ -135,8 +137,8 @@
 </script>
 
 <style lang="scss">
-	#report{
-		.user_sign_url{
+	#report {
+		.user_sign_url {
 			width: 750upx;
 			height: 300upx;
 			display: flex;
@@ -146,6 +148,7 @@
 			border: 1px solid #dddddd;
 		}
 	}
+
 	.popup-body {
 		background: #FFFFFF;
 
