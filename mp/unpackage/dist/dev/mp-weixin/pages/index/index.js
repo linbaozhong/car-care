@@ -149,7 +149,8 @@ var ctx;var _default =
     onTouchstart: function onTouchstart(e) {
       // console.log(e)
       this.drawing = true;
-      this.lastPos = this.currentPos = this._getPosition(e);
+      this.lastPos = this._getPosition(e);
+      this.currentPos = this._getPosition(e);
       this._renderCanvas();
     },
     onTouchmove: function onTouchmove(e) {
@@ -174,10 +175,8 @@ var ctx;var _default =
     // Render the signature to the canvas
     _renderCanvas: function _renderCanvas() {
       if (this.drawing) {
-        console.log(this.lastPos.x, this.lastPos.y, this.currentPos.x, this.currentPos.y);
         ctx.moveTo(this.lastPos.x, this.lastPos.y);
         ctx.lineTo(this.currentPos.x, this.currentPos.y);
-        ctx.setStrokeStyle("#ff0000");
         ctx.stroke();
         ctx.draw();
         this.lastPos = this.currentPos;
@@ -186,6 +185,7 @@ var ctx;var _default =
     // Reset the canvas context
     _resetCanvas: function _resetCanvas() {
       ctx = uni.createCanvasContext('firstCanvas');
+      ctx.setStrokeStyle("#ff0000");
       ctx.setLineWidth(5);
     } } };exports.default = _default;
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 1)["default"]))

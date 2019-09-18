@@ -35,7 +35,8 @@
 			onTouchstart(e){
 				// console.log(e)
 				this.drawing = true;
-				this.lastPos = this.currentPos = this._getPosition(e)
+				this.lastPos = this._getPosition(e)
+				this.currentPos = this._getPosition(e)
 				this._renderCanvas()
 			},
 			onTouchmove(e){
@@ -60,10 +61,8 @@
 			// Render the signature to the canvas
 			_renderCanvas() {
 			  if (this.drawing) {
-				  console.log(this.lastPos.x, this.lastPos.y,this.currentPos.x, this.currentPos.y)
 			    ctx.moveTo(this.lastPos.x, this.lastPos.y)
 			    ctx.lineTo(this.currentPos.x, this.currentPos.y)
-			  ctx.setStrokeStyle("#ff0000")
 			    ctx.stroke()
 				ctx.draw()
 			    this.lastPos = this.currentPos;
@@ -72,6 +71,7 @@
 			// Reset the canvas context
 			_resetCanvas() {
 			  ctx = uni.createCanvasContext('firstCanvas')
+			  ctx.setStrokeStyle("#ff0000")
 			  ctx.setLineWidth(5)
 			},
 		}
