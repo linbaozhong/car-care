@@ -7612,6 +7612,349 @@ var _index = _interopRequireDefault(__webpack_require__(/*! ./pages/index/index.
 createPage(_index.default);
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 1)["createPage"]))
 
+/***/ }),
+/* 12 */,
+/* 13 */,
+/* 14 */,
+/* 15 */,
+/* 16 */,
+/* 17 */,
+/* 18 */,
+/* 19 */
+/*!******************************************************************************************************!*\
+  !*** D:/snow-go/src/github.com/linbaozhong/car-care/mp/main.js?{"page":"pages%2Fdaodian%2Fdaodian"} ***!
+  \******************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* WEBPACK VAR INJECTION */(function(createPage) {__webpack_require__(/*! uni-pages */ 4);
+
+var _vue = _interopRequireDefault(__webpack_require__(/*! vue */ 2));
+var _daodian = _interopRequireDefault(__webpack_require__(/*! ./pages/daodian/daodian.vue */ 20));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}
+createPage(_daodian.default);
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 1)["createPage"]))
+
+/***/ }),
+/* 20 */,
+/* 21 */,
+/* 22 */,
+/* 23 */,
+/* 24 */,
+/* 25 */
+/*!***************************************************************************!*\
+  !*** D:/snow-go/src/github.com/linbaozhong/car-care/mp/common/js/util.js ***!
+  \***************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+function formatTime(time) {
+  if (typeof time !== 'number' || time < 0) {
+    return time;
+  }
+
+  var hour = parseInt(time / 3600);
+  time = time % 3600;
+  var minute = parseInt(time / 60);
+  time = time % 60;
+  var second = time;
+
+  return [hour, minute, second].map(function (n) {
+    n = n.toString();
+    return n[1] ? n : '0' + n;
+  }).join(':');
+}
+
+function formatLocation(longitude, latitude) {
+  if (typeof longitude === 'string' && typeof latitude === 'string') {
+    longitude = parseFloat(longitude);
+    latitude = parseFloat(latitude);
+  }
+
+  longitude = longitude.toFixed(2);
+  latitude = latitude.toFixed(2);
+
+  return {
+    longitude: longitude.toString().split('.'),
+    latitude: latitude.toString().split('.') };
+
+}
+
+function getDuration(ms) {
+  var days = ms / 1000 / 60 / 60 / 24;
+  var daysRound = Math.floor(days);
+  var hours = ms / 1000 / 60 / 60 - 24 * daysRound;
+  var hoursRound = Math.floor(hours);
+  var minutes = ms / 1000 / 60 - 24 * 60 * daysRound - 60 * hoursRound;
+  var minutesRound = Math.floor(minutes);
+  var seconds = ms / 1000 - 24 * 60 * 60 * daysRound - 60 * 60 * hoursRound - 60 * minutesRound;
+  var secondsRound = Math.floor(seconds);
+  var time = (daysRound > 0 ? daysRound + '天 ' : '') + hoursRound + ':' + minutesRound + ':' + secondsRound;
+  return time;
+}
+
+var dateUtils = {
+  UNITS: {
+    '年': 31557600000,
+    '月': 2629800000,
+    '天': 86400000,
+    '小时': 3600000,
+    '分钟': 60000,
+    '秒': 1000 },
+
+  humanize: function humanize(milliseconds) {
+    var humanize = '';
+    for (var key in this.UNITS) {
+      if (milliseconds >= this.UNITS[key]) {
+        humanize = Math.floor(milliseconds / this.UNITS[key]) + key + '前';
+        break;
+      }
+    }
+    return humanize || '刚刚';
+  },
+  format: function format(milliseconds) {
+    var date = new Date(milliseconds);
+    var diff = Date.now() - milliseconds;
+    if (diff < this.UNITS['天']) {
+      return this.humanize(diff);
+    }
+    var _format = function _format(number) {
+      return number < 10 ? '0' + number : number;
+    };
+    return date.getFullYear() + '/' + _format(date.getMonth() + 1) + '/' + _format(date.getDay()) + '-' +
+    _format(date.getHours()) + ':' + _format(date.getMinutes());
+  },
+  parse: function parse(str) {//将"yyyy-mm-dd HH:MM:ss"格式的字符串，转化为一个Date对象
+    var a = str.split(/[^0-9]/);
+    return new Date(a[0], a[1] - 1, a[2], a[3], a[4], a[5]);
+  } };
+
+
+function toNumber(data) {
+  var val = '';
+  if (typeof data === 'object' && data.detail) {
+    val = data.detail.value;
+  } else {
+    val = data;
+  }
+  val = Number.parseInt(val);
+  if (Number.isNaN(val)) return '';
+  return val;
+}
+
+function toPassword(d) {
+  var p = [];
+  for (var i = 0; i < d.length; i++) {
+    p.push('.');
+  }
+  return p.join('');
+}
+
+function isMobile(d) {
+  return d.match(/^1[345678]\d{9}$/);
+}
+
+function isPassword(d) {
+  return d.match(/^\d{4}$/);
+}
+
+module.exports = {
+  isPassword: isPassword,
+  isMobile: isMobile,
+  toNumber: toNumber,
+  toPassword: toPassword,
+  formatTime: formatTime,
+  formatLocation: formatLocation,
+  dateUtils: dateUtils,
+  getDuration: getDuration };
+
+/***/ }),
+/* 26 */,
+/* 27 */,
+/* 28 */
+/*!************************************************************************************************!*\
+  !*** D:/snow-go/src/github.com/linbaozhong/car-care/mp/main.js?{"page":"pages%2Fwode%2Fwode"} ***!
+  \************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* WEBPACK VAR INJECTION */(function(createPage) {__webpack_require__(/*! uni-pages */ 4);
+
+var _vue = _interopRequireDefault(__webpack_require__(/*! vue */ 2));
+var _wode = _interopRequireDefault(__webpack_require__(/*! ./pages/wode/wode.vue */ 29));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}
+createPage(_wode.default);
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 1)["createPage"]))
+
+/***/ }),
+/* 29 */,
+/* 30 */,
+/* 31 */,
+/* 32 */,
+/* 33 */,
+/* 34 */
+/*!*****************************************************************************!*\
+  !*** D:/snow-go/src/github.com/linbaozhong/car-care/mp/common/js/helper.js ***!
+  \*****************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* WEBPACK VAR INJECTION */(function(uni) {var baseUrl = {
+  host: '127.0.0.1',
+  port: 9000,
+  protocol: 'http:',
+  appId: 3 };
+
+
+var SESSION_KEY = 'SESSION_USER';
+//
+var session = {
+  token: '',
+  auto: '' };
+
+
+var getUrl = function getUrl(path, auto) {
+  session = getApp().globalData.session || session;
+  return baseUrl.protocol + '//' + baseUrl.host + ':' + baseUrl.port + path + '?appId=' + baseUrl.appId + '&tk=' + (
+  auto ? session.auto || '' : session.token || '');
+};
+
+var ajax = {
+  get: function get(url, data, callback) {
+    return uni.request({
+      url: getUrl(url),
+      data: data,
+      method: 'GET',
+      success: function success(res) {
+        if (res.statusCode === 200) {
+          callback(res.data);
+          return;
+        }
+        callback({
+          success: false,
+          error: {
+            code: res.statusCode,
+            detail: res.errMsg } });
+
+
+      },
+      fail: function fail(err) {
+        callback({
+          success: false,
+          error: err });
+
+      } });
+
+  },
+  post: function post(url, data, callback) {
+    return uni.request({
+      url: getUrl(url),
+      data: data,
+      method: 'POST',
+      header: {
+        'content-type': 'application/x-www-form-urlencoded' },
+
+      success: function success(res) {
+        if (res.statusCode === 200) {
+          callback(res.data);
+          return;
+        }
+        callback({
+          success: false,
+          error: {
+            code: res.statusCode,
+            detail: res.errMsg } });
+
+
+      },
+      fail: function fail(err) {
+        callback({
+          success: false,
+          error: err });
+
+      } });
+
+  } };
+
+
+var login = function login() {var callback = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : null;
+  var provider = '';
+
+  provider = 'weixin';
+
+
+  uni.login({
+    provider: provider,
+    success: function success(res) {
+      if (res.code) {
+        ajax.get('/v1/weixin/login', {
+          code: res.code },
+        function (res) {
+          if (res.success) {
+            setSession(res.data, callback);
+          }
+        });
+      }
+    } });
+
+};
+
+var getSession = function getSession() {
+  try {
+    return Object.assign({
+      key: SESSION_KEY },
+    JSON.parse(uni.getStorageSync(SESSION_KEY)));
+  } catch (e) {}
+  return null;
+};
+var setSession = function setSession(data, callback) {
+  if (session) {
+    session = Object.assign({}, session, data);
+  } else {
+    session = data;
+  }
+  uni.setStorage({
+    key: SESSION_KEY,
+    data: JSON.stringify(session),
+    success: function success(res) {
+      getApp().globalData.session = session;
+      if (callback) {
+        callback(getApp().globalData.session);
+      }
+    },
+    fail: function fail(err) {
+      // console.log(err)
+    } });
+
+};
+
+module.exports = {
+  getSession: getSession,
+  login: login,
+  setSession: setSession,
+  ajax: ajax };
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 1)["default"]))
+
+/***/ }),
+/* 35 */,
+/* 36 */,
+/* 37 */
+/*!**************************************************************************************************************!*\
+  !*** D:/snow-go/src/github.com/linbaozhong/car-care/mp/main.js?{"page":"pages%2Fdaodian%2Freport%2Freport"} ***!
+  \**************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* WEBPACK VAR INJECTION */(function(createPage) {__webpack_require__(/*! uni-pages */ 4);
+
+var _vue = _interopRequireDefault(__webpack_require__(/*! vue */ 2));
+var _report = _interopRequireDefault(__webpack_require__(/*! ./pages/daodian/report/report.vue */ 38));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}
+createPage(_report.default);
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 1)["createPage"]))
+
 /***/ })
 ]]);
 //# sourceMappingURL=../../.sourcemap/mp-weixin/common/vendor.js.map
