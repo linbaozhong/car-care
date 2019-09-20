@@ -1,21 +1,44 @@
 <template>
-	<view id="report">
-		<view class="user_sign_url" @click="onShowSignature">
-			<view v-if="report.user_sign_url==''">
-				点我签名
+	<view class="content">
+		<view class="item">
+			<view class="input-plate" @click="onPlateClick">
+				<view class="placeholder">{{placeholder}}</view>
+				<view class="input-plate-number">
+					<view v-for="word in record.plateNumber" :key="word" class="input-plate-number-word">{{word}}</view>
+				</view>
 			</view>
-			<image v-else :src="report.user_sign_url" mode="aspectFit"></image>
 		</view>
+		<view class="item" @click="onVinChange(record.vin_url==='')">
+			<view class="">
+				车架号：
+			</view>
+			<image class="vin_url" v-if="record.vin_url!=''" :src="record.vin_url" mode="aspectFit" @click="onVinChange(true)"></image>
+		</view>
+		<view class="item" @click="onUserSignChange(record.user_sign_url==='')">
+			<view class="">
+				签名：
+			</view>
+			<image class="sign_url" v-if="record.user_sign_url!=''" :src="record.user_sign_url" mode="aspectFit" @click="onUserSignChange(true)"></image>
+		</view>
+		<!-- 底部车牌号输入弹窗 -->
+		<plate_input v-if="showPlateInput" :plateNumber="record.plateNumber" @on-close="onPlateClose" @on-change="onPlateChange"></plate_input>
 		<!-- 底部签名弹窗 -->
-		<uni-popup ref="signature" class="" type="bottom" :custom="true">
+		<uni-popup ref="signature" type="bottom" :custom="true">
 			<view class="popup-body signature">
 				<view class="tools">
 					<view class="" @click="_resetCanvas()">重写</view>
+					<view class="palette">
+						<view class="palette-color" :style="{background:color}"></view>
+						<view v-for="color in colors" :key="color" :style="{background:color}" @click="onColorChange(color)"></view>
+					</view>
 					<view class="" @click="onOk">确定</view>
 				</view>
 				<view>
 					<canvas style="width: 750rpx; height: 250rpx;" canvas-id="firstCanvas" class="signature-body" @touchstart="onTouchstart"
 					 @touchmove="onTouchmove" @touchend="onTouchend"></canvas>
+				</view>
+				<view class="tools">
+					
 				</view>
 			</view>
 		</uni-popup>
@@ -23,6 +46,7 @@
 </template>
 
 <script>
+	import plate_input from '@/components/plate-input.vue'
 	import uniPopup from '@/components/uni-popup/uni-popup.vue'
 	let signature = {
 		ctx: null,
@@ -36,42 +60,67 @@
 			y: 0
 		},
 	}
+
 	export default {
 		components: {
+			plate_input,
 			uniPopup,
 		},
 		data() {
 			return {
-				type: 0,
-				car: {
-					id: 1,
-					plate: '京N9CD10',
-					brand: {
-						name: '昊锐',
-						logo_url: 'https://car3.autoimg.cn/cardfs/series/g29/M0B/AE/D4/100x100_f40_autohomecar__wKgHG1s9t3CAQfVMAABHgh0VMdw516.png',
-						maker: '上海大众',
-					},
-					model: '手自一体 优雅版',
-					years: '2012',
-					odometer: 5600,
-				},
-				report: {
-					id: 1,
-					rpt_time: 1568780293449,
-					abnormal: 2,
+				colors:['#ff0000','#333333','#666666','#999999'],
+				color:'#333333',
+				placeholder: '车牌号：',
+				showPlateInput: false,
+				record: {
+					plateNumber: '',
+					vin_url: '',
 					clerk_sign_url: '',
 					user_sign_url: '',
 				},
 			}
 		},
-		onLoad(opt) {
+		watch: {
+			"record.plateNumber"(v) {
+				if (v === '') {
+					this.placeholder = '车牌号：'
+				} else {
+					this.placeholder = ''
+				}
+			},
+		},
+		onLoad() {
 			this._resetCanvas()
-			this.type = opt.type
-			this.report.id = opt.id
 		},
 		methods: {
-			onShowSignature() {
-				this.$refs['signature'].open()
+			onPlateClick() {
+				this.showPlateInput = true
+			},
+			onPlateClose() {
+				this.showPlateInput = false
+			},
+			onPlateChange(v) {
+				this.record.plateNumber = v
+			},
+			onVinChange(t) {
+				this.onPlateClose()
+				if (t) {
+					let _this = this
+					uni.chooseImage({
+						count: 6, //默认9
+						sizeType: ['original', 'compressed'], //可以指定是原图还是压缩图，默认二者都有
+						success: function(res) {
+							_this.record.vin_url = res.tempFilePaths[0];
+						}
+					});
+				}
+			},
+			onUserSignChange(t) {
+				this.onPlateClose()
+				if (t) {
+					this.$refs['signature'].open()
+					this._resetCanvas()
+				}
 			},
 			onTouchstart(e) {
 				signature.drawing = true;
@@ -113,9 +162,9 @@
 			// Reset the canvas context
 			_resetCanvas() {
 				signature.ctx = uni.createCanvasContext('firstCanvas')
-				signature.ctx.setStrokeStyle("#ff0000")
-				signature.ctx.setLineWidth(2)
-				signature.ctx.draw()
+				signature.ctx.setStrokeStyle(this.color)
+				signature.ctx.setLineWidth(3)
+				signature.ctx.save()
 			},
 			_getDataURL() {
 				let _this = this
@@ -123,30 +172,65 @@
 					canvasId: 'firstCanvas',
 					success(res) {
 						if (res.errMsg === 'canvasToTempFilePath:ok') {
-							_this.report.user_sign_url = res.tempFilePath
+							_this.record.user_sign_url = res.tempFilePath
 						} else {
 							console.log(res.errMsg)
 						}
 					}
 				})
+			},
+			onColorChange(color){
+				this.color = color
+				signature.ctx.setStrokeStyle(this.color)
 			}
 		}
 	}
 </script>
 
 <style lang="scss">
-	#report {
-		.user_sign_url {
-			width: 750upx;
-			height: 300upx;
-			display: flex;
-			flex-direction: column;
-			justify-content: space-between;
-			align-items: center;
-			border: 1px solid #dddddd;
+	.content {
+		padding: 20upx;
+
+		.item {
+			padding: 20upx 10upx;
+			font-size: 32upx;
+			min-height: 50upx;
+			line-height: 50upx;
+			border-bottom: 1px solid $uni-border-color;
+			.sign_url{
+				height: 180upx;
+				max-height: 110px;
+			}
+			.vin_url{
+				height: 200upx;
+				max-height: 200px;
+			}
+		}
+
+		.input-plate {
+			position: relative;
+			text-align: center;
+
+			.placeholder {
+				text-align: left;
+			}
+
+			.input-plate-number {
+				position: absolute;
+				top: 0;
+				right: 50upx;
+				bottom: 0;
+				left: 50upx;
+				display: flex;
+				justify-content: center;
+
+				.input-plate-number-word {
+					width: 90upx;
+					flex-shrink: 1;
+				}
+			}
 		}
 	}
-
 	.signature {
 		background: #FFFFFF;
 
@@ -156,6 +240,16 @@
 			display: flex;
 			justify-content: space-between;
 			align-items: center;
+			.palette{
+				display: flex;
+				view{
+					width: 40upx;
+					height: 40upx;
+				}
+				.palette-color{
+					margin-right: 20upx;
+				}
+			}
 		}
 
 		.signature-body {
