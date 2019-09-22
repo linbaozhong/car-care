@@ -71,7 +71,7 @@ var dateUtils = {
 		var _format = function(number) {
 			return (number < 10 ? ('0' + number) : number);
 		};
-		return date.getFullYear() + '/' + _format(date.getMonth() + 1) + '/' + _format(date.getDay()) + '-' +
+		return date.getFullYear() + '/' + _format(date.getMonth() + 1) + '/' + _format(date.getDay()) + ' ' +
 			_format(date.getHours()) + ':' + _format(date.getMinutes());
 	},
 	parse: function(str) { //将"yyyy-mm-dd HH:MM:ss"格式的字符串，转化为一个Date对象
@@ -107,14 +107,19 @@ function isMobile(d) {
 function isPassword(d) {
 	return d.match(/^\d{4}$/)
 }
-
+//格式化车牌号
+function plateFormat(m) {
+	if (!m || m === '') return ''
+	return m.slice(0, 2) + ' · ' + m.slice(2)
+}
 module.exports = {
 	isPassword,
-	isMobile: isMobile,
-	toNumber: toNumber,
-	toPassword: toPassword,
-	formatTime: formatTime,
-	formatLocation: formatLocation,
-	dateUtils: dateUtils,
+	isMobile,
+	toNumber,
+	toPassword,
+	formatTime,
+	formatLocation,
+	dateUtils,
+	plateFormat,
 	getDuration
 }

@@ -13,10 +13,11 @@
 </template>
 
 <script>
+
 	export default {
 		data() {
 			return {
-				title: 'Hello'
+				brand:brand
 			}
 		},
 		onLoad() {

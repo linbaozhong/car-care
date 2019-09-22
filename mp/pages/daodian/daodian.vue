@@ -158,7 +158,7 @@
 						rpt_time: 1568780293449,
 					},
 				}]
-			};
+			}
 		},
 		computed: {
 			dateFormat() {
