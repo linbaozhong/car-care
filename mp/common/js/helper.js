@@ -50,7 +50,7 @@ const ajax = {
 			url: getUrl(url),
 			data: data,
 			method: 'POST',
-			header:{
+			header: {
 				'content-type': 'application/x-www-form-urlencoded',
 			},
 			success(res) {
@@ -76,7 +76,7 @@ const ajax = {
 	}
 }
 
-const login = (callback=null) => {
+const login = (callback = null) => {
 	let provider = ''
 	// #ifdef MP-WEIXIN
 	provider = 'weixin'
@@ -90,7 +90,7 @@ const login = (callback=null) => {
 					code: res.code,
 				}, res => {
 					if (res.success) {
-						setSession(res.data,callback)
+						setSession(res.data, callback)
 					}
 				})
 			}

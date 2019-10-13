@@ -90,7 +90,7 @@
 			},
 		},
 		onLoad() {
-			this._resetCanvas()
+			// this._resetCanvas()
 		},
 		methods: {
 			onPlateClick() {

@@ -1,0 +1,258 @@
+swagger: "2.0"
+info:
+  title: beego Test API
+  description: beego has a very cool tools to autogenerate documents for your API
+  version: 1.0.0
+  termsOfService: http://beego.me/
+  contact:
+    email: astaxie@gmail.com
+  license:
+    name: Apache 2.0
+    url: http://www.apache.org/licenses/LICENSE-2.0.html
+basePath: /v1
+paths:
+  /brand/gets:
+    get:
+      tags:
+      - brand
+      summary: Gets
+      description: 读取全部品牌列表
+      responses:
+        "200":
+          description: ""
+          schema:
+            $ref: '#/definitions/models.Result'
+        "400":
+          description: '{object} models.Result'
+  /clerk/logout:
+    post:
+      tags:
+      - clerk
+      summary: 注销
+      description: 店员注销
+      parameters:
+      - in: query
+        name: tk
+        description: token
+        required: true
+        type: string
+      responses:
+        "200":
+          description: ""
+          schema:
+            $ref: '#/definitions/models.Result'
+        "400":
+          description: '{object} models.Result'
+  /clerk/updateinfo:
+    post:
+      tags:
+      - clerk
+      summary: UpdateInfo
+      description: 修改店员信息
+      parameters:
+      - in: query
+        name: tk
+        description: token
+        required: true
+        type: string
+      - in: formData
+        name: name
+        description: 姓名
+        required: true
+        type: string
+      responses:
+        "200":
+          description: ""
+          schema:
+            $ref: '#/definitions/models.Result'
+        "400":
+          description: '{object} models.Result'
+  /dict/neishi:
+    get:
+      tags:
+      - dict
+      summary: 字典-汽车内饰检查项目
+      description: 汽车内饰检查项目字典
+      parameters:
+      - in: query
+        name: appId
+        description: appId
+        required: true
+        type: string
+      - in: query
+        name: tk
+        description: token
+        required: true
+        type: string
+      responses:
+        "200":
+          description: ""
+          schema:
+            $ref: '#/definitions/models.Result'
+        "400":
+          description: '{object} models.Result'
+  /dict/qita:
+    get:
+      tags:
+      - dict
+      summary: 字典-汽车其他检查项目
+      description: 汽车其他检查项目字典
+      parameters:
+      - in: query
+        name: appId
+        description: appId
+        required: true
+        type: string
+      - in: query
+        name: tk
+        description: token
+        required: true
+        type: string
+      responses:
+        "200":
+          description: ""
+          schema:
+            $ref: '#/definitions/models.Result'
+        "400":
+          description: '{object} models.Result'
+  /dict/shangxian:
+    get:
+      tags:
+      - dict
+      summary: 字典-汽车上线检查项目
+      parameters:
+      - in: query
+        name: appId
+        description: appId
+        required: true
+        type: string
+      - in: query
+        name: tk
+        description: token
+        required: true
+        type: string
+      responses:
+        "200":
+          description: ""
+          schema:
+            $ref: '#/definitions/models.Result'
+        "400":
+          description: '{object} models.Result'
+  /dict/waiguan:
+    get:
+      tags:
+      - dict
+      summary: 字典-汽车外观检查项目
+      description: 汽车外观检查项目字典
+      parameters:
+      - in: query
+        name: appId
+        description: appId
+        required: true
+        type: string
+      - in: query
+        name: tk
+        description: token
+        required: true
+        type: string
+      responses:
+        "200":
+          description: ""
+          schema:
+            $ref: '#/definitions/models.Result'
+        "400":
+          description: '{object} models.Result'
+  /dict/yibiao:
+    get:
+      tags:
+      - dict
+      summary: 字典-汽车仪表检查项目
+      description: 汽车仪表检查项目字典
+      parameters:
+      - in: query
+        name: appId
+        description: appId
+        required: true
+        type: string
+      - in: query
+        name: tk
+        description: token
+        required: true
+        type: string
+      responses:
+        "200":
+          description: ""
+          schema:
+            $ref: '#/definitions/models.Result'
+        "400":
+          description: '{object} models.Result'
+  /vis/login:
+    post:
+      tags:
+      - vis
+      summary: Login
+      description: 登录
+      parameters:
+      - in: formData
+        name: mobile
+        description: 手机号码
+        required: true
+        type: integer
+        format: int64
+      - in: formData
+        name: pwd
+        description: 密码
+        required: true
+        type: string
+      responses:
+        "200":
+          description: ""
+          schema:
+            $ref: '#/definitions/models.Result'
+        "400":
+          description: '{object} models.Result'
+  /vis/register:
+    post:
+      tags:
+      - vis
+      summary: Register
+      description: 注册
+      parameters:
+      - in: formData
+        name: mobile
+        description: 手机号码
+        required: true
+        type: integer
+        format: int64
+      - in: formData
+        name: pwd
+        description: 密码
+        required: true
+        type: string
+      responses:
+        "200":
+          description: ""
+          schema:
+            $ref: '#/definitions/models.Result'
+        "400":
+          description: '{object} models.Result'
+definitions:
+  .false:
+    type: object
+  models.Result:
+    title: Result
+    type: object
+    properties:
+      code:
+        type: string
+      data:
+        $ref: '#/definitions/8003.0xc00023cc90.false'
+      message:
+        type: string
+      status:
+        type: integer
+        format: int64
+tags:
+- name: dict
+  description: |
+    字典

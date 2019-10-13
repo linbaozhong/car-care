@@ -1,5 +1,5 @@
 <template>
-	<view>
+	<view class="content">
 		<view class="records" v-for="record in records" :key="record.id">
 			<view class="header">
 				<view class="logo">
@@ -80,6 +80,7 @@
 </template>
 
 <script>
+	import helper from '@/common/js/helper.js'
 	import uniBadge from '@/components/uni-badge/uni-badge.vue'
 	import util from '@/common/js/util.js'
 
@@ -174,8 +175,12 @@
 				}
 			}
 		},
-		onLoad() {},
-		methods: {}
+		onLoad() {
+			helper.initSession()
+		},
+		methods: {
+			
+		}
 	};
 </script>
 
@@ -243,9 +248,11 @@
 			.right {
 				flex-direction: row-reverse;
 			}
-			.sub-title{
+
+			.sub-title {
 				line-height: 1.3;
 			}
+
 			.gray {
 				font-size: 24upx;
 			}

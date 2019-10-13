@@ -15,51 +15,75 @@ func init() {
 			MethodParams: param.Make(),
 			Params: nil})
 
-	beego.GlobalControllerRouter["github.com/linbaozhong/car-care/api/controllers:Brand"] = append(beego.GlobalControllerRouter["github.com/linbaozhong/car-care/api/controllers:Brand"],
+	beego.GlobalControllerRouter["github.com/linbaozhong/car-care/api/controllers:Clerk"] = append(beego.GlobalControllerRouter["github.com/linbaozhong/car-care/api/controllers:Clerk"],
 		beego.ControllerComments{
-			Method: "Test",
-			Router: `/test`,
-			AllowHTTPMethods: []string{"get"},
-			MethodParams: param.Make(),
-			Params: nil})
-
-	beego.GlobalControllerRouter["github.com/linbaozhong/car-care/api/controllers:ObjectController"] = append(beego.GlobalControllerRouter["github.com/linbaozhong/car-care/api/controllers:ObjectController"],
-		beego.ControllerComments{
-			Method: "Post",
-			Router: `/`,
+			Method: "Logout",
+			Router: `/logout`,
 			AllowHTTPMethods: []string{"post"},
 			MethodParams: param.Make(),
 			Params: nil})
 
-	beego.GlobalControllerRouter["github.com/linbaozhong/car-care/api/controllers:ObjectController"] = append(beego.GlobalControllerRouter["github.com/linbaozhong/car-care/api/controllers:ObjectController"],
+	beego.GlobalControllerRouter["github.com/linbaozhong/car-care/api/controllers:Clerk"] = append(beego.GlobalControllerRouter["github.com/linbaozhong/car-care/api/controllers:Clerk"],
 		beego.ControllerComments{
-			Method: "GetAll",
-			Router: `/`,
+			Method: "UpdateInfo",
+			Router: `/updateinfo`,
+			AllowHTTPMethods: []string{"post"},
+			MethodParams: param.Make(),
+			Params: nil})
+
+	beego.GlobalControllerRouter["github.com/linbaozhong/car-care/api/controllers:Dict"] = append(beego.GlobalControllerRouter["github.com/linbaozhong/car-care/api/controllers:Dict"],
+		beego.ControllerComments{
+			Method: "Neishi",
+			Router: `/neishi`,
 			AllowHTTPMethods: []string{"get"},
 			MethodParams: param.Make(),
 			Params: nil})
 
-	beego.GlobalControllerRouter["github.com/linbaozhong/car-care/api/controllers:ObjectController"] = append(beego.GlobalControllerRouter["github.com/linbaozhong/car-care/api/controllers:ObjectController"],
+	beego.GlobalControllerRouter["github.com/linbaozhong/car-care/api/controllers:Dict"] = append(beego.GlobalControllerRouter["github.com/linbaozhong/car-care/api/controllers:Dict"],
 		beego.ControllerComments{
-			Method: "Get",
-			Router: `/:objectId`,
+			Method: "Qita",
+			Router: `/qita`,
 			AllowHTTPMethods: []string{"get"},
 			MethodParams: param.Make(),
 			Params: nil})
 
-	beego.GlobalControllerRouter["github.com/linbaozhong/car-care/api/controllers:ObjectController"] = append(beego.GlobalControllerRouter["github.com/linbaozhong/car-care/api/controllers:ObjectController"],
+	beego.GlobalControllerRouter["github.com/linbaozhong/car-care/api/controllers:Dict"] = append(beego.GlobalControllerRouter["github.com/linbaozhong/car-care/api/controllers:Dict"],
 		beego.ControllerComments{
-			Method: "Put",
-			Router: `/:objectId`,
-			AllowHTTPMethods: []string{"put"},
+			Method: "Shangxian",
+			Router: `/shangxian`,
+			AllowHTTPMethods: []string{"get"},
 			MethodParams: param.Make(),
 			Params: nil})
 
-	beego.GlobalControllerRouter["github.com/linbaozhong/car-care/api/controllers:ObjectController"] = append(beego.GlobalControllerRouter["github.com/linbaozhong/car-care/api/controllers:ObjectController"],
+	beego.GlobalControllerRouter["github.com/linbaozhong/car-care/api/controllers:Dict"] = append(beego.GlobalControllerRouter["github.com/linbaozhong/car-care/api/controllers:Dict"],
 		beego.ControllerComments{
-			Method: "Delete",
-			Router: `/:objectId`,
-			AllowHTTPMethods: []string{"delete"},
+			Method: "Waiguan",
+			Router: `/waiguan`,
+			AllowHTTPMethods: []string{"get"},
+			MethodParams: param.Make(),
+			Params: nil})
+
+	beego.GlobalControllerRouter["github.com/linbaozhong/car-care/api/controllers:Dict"] = append(beego.GlobalControllerRouter["github.com/linbaozhong/car-care/api/controllers:Dict"],
+		beego.ControllerComments{
+			Method: "Yibiao",
+			Router: `/yibiao`,
+			AllowHTTPMethods: []string{"get"},
+			MethodParams: param.Make(),
+			Params: nil})
+
+	beego.GlobalControllerRouter["github.com/linbaozhong/car-care/api/controllers:Visitor"] = append(beego.GlobalControllerRouter["github.com/linbaozhong/car-care/api/controllers:Visitor"],
+		beego.ControllerComments{
+			Method: "Login",
+			Router: `/login`,
+			AllowHTTPMethods: []string{"post"},
+			MethodParams: param.Make(),
+			Params: nil})
+
+	beego.GlobalControllerRouter["github.com/linbaozhong/car-care/api/controllers:Visitor"] = append(beego.GlobalControllerRouter["github.com/linbaozhong/car-care/api/controllers:Visitor"],
+		beego.ControllerComments{
+			Method: "Register",
+			Router: `/register`,
+			AllowHTTPMethods: []string{"post"},
 			MethodParams: param.Make(),
 			Params: nil})
 

@@ -21,6 +21,7 @@
 </template> 
 
 <script>
+	import helper from '@/common/js/helper.js'
 export default {
 	data() {
 		return {
@@ -29,6 +30,7 @@ export default {
 	},
 	onLoad() {},
 	onShow() {
+		helper.initSession()
 		this.active = true;
 	},
 	onHide() {

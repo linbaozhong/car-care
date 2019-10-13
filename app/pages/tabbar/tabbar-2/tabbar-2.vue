@@ -5,14 +5,15 @@
 </template>
 
 <script>
+	import helper from '@/common/js/helper.js'
 	export default {
 		data() {
 			return {
 				title: 'Hello'
 			}
 		},
-		onLoad() {
-
+		onShow() {
+helper.initSession()
 		},
 		methods: {
 
@@ -21,9 +22,5 @@
 </script>
 
 <style>
-	.content {
-		text-align: center;
-		height: 400upx;
-		margin-top: 200upx;
-	}
+
 </style>

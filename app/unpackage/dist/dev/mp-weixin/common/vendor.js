@@ -8161,12 +8161,9 @@ Util = /*#__PURE__*/function () {
           // }
         },
         fail: function fail(e) {
-          // if (process.env.NODE_ENV === 'development') {
-          //   console.log('stat request fail', e);
-          // }
           if (++_this5._retry < 3) {
             setTimeout(function () {
-              _this5.request(data);
+              _this5._sendRequest(optionsData);
             }, 1000);
           }
         } });
@@ -8376,10 +8373,9 @@ var lifecycle = {
 
 
 function main() {
-  var Vue = __webpack_require__(/*! vue */ 2);
   if (true) {
     uni.report = function (type, options) {};
-  } else {}
+  } else { var Vue; }
 }
 
 main();
@@ -8393,7 +8389,7 @@ main();
 /*! exports provided: _from, _id, _inBundle, _integrity, _location, _phantomChildren, _requested, _requiredBy, _resolved, _shasum, _spec, _where, author, bugs, bundleDependencies, deprecated, description, devDependencies, files, gitHead, homepage, license, main, name, repository, scripts, version, default */
 /***/ (function(module) {
 
-module.exports = {"_from":"@dcloudio/uni-stat@next","_id":"@dcloudio/uni-stat@2.0.0-23120190920002","_inBundle":false,"_integrity":"sha512-hrLnv6LP3LQAJGCXifaa+zaSAMDIn8aLwz9BvSL66lrwWJ5GAIF2dph+EnjrK3fTOccxO3Vsd4o+PywHqjuyTg==","_location":"/@dcloudio/uni-stat","_phantomChildren":{},"_requested":{"type":"tag","registry":true,"raw":"@dcloudio/uni-stat@next","name":"@dcloudio/uni-stat","escapedName":"@dcloudio%2funi-stat","scope":"@dcloudio","rawSpec":"next","saveSpec":null,"fetchSpec":"next"},"_requiredBy":["#USER","/","/@dcloudio/vue-cli-plugin-uni"],"_resolved":"https://registry.npmjs.org/@dcloudio/uni-stat/-/uni-stat-2.0.0-23120190920002.tgz","_shasum":"61c805306212882e567f01978c0ed880169c185f","_spec":"@dcloudio/uni-stat@next","_where":"/Users/fxy/Documents/DCloud/HbuilderX-plugins/release/uniapp-cli","author":"","bugs":{"url":"https://github.com/dcloudio/uni-app/issues"},"bundleDependencies":false,"deprecated":false,"description":"","devDependencies":{"@babel/core":"^7.5.5","@babel/preset-env":"^7.5.5","eslint":"^6.1.0","rollup":"^1.19.3","rollup-plugin-babel":"^4.3.3","rollup-plugin-clear":"^2.0.7","rollup-plugin-commonjs":"^10.0.2","rollup-plugin-copy":"^3.1.0","rollup-plugin-eslint":"^7.0.0","rollup-plugin-json":"^4.0.0","rollup-plugin-node-resolve":"^5.2.0","rollup-plugin-replace":"^2.2.0","rollup-plugin-uglify":"^6.0.2"},"files":["dist","package.json","LICENSE"],"gitHead":"a9dfc1e2b7a5608e010228c06a040b8f267aace2","homepage":"https://github.com/dcloudio/uni-app#readme","license":"Apache-2.0","main":"dist/index.js","name":"@dcloudio/uni-stat","repository":{"type":"git","url":"git+https://github.com/dcloudio/uni-app.git","directory":"packages/uni-stat"},"scripts":{"build":"NODE_ENV=production rollup -c rollup.config.js","dev":"NODE_ENV=development rollup -w -c rollup.config.js"},"version":"2.0.0-23120190920002"};
+module.exports = {"_from":"@dcloudio/uni-stat@next","_id":"@dcloudio/uni-stat@2.0.0-23320190923002","_inBundle":false,"_integrity":"sha512-MnftsvgOac3q1FCOBPzivbFn8GNQFo7D2DY325HeEZyFCWgx5GEwHpGYjT1PQU6v7DaDn0ruxa3ObdpUIYbmZw==","_location":"/@dcloudio/uni-stat","_phantomChildren":{},"_requested":{"type":"tag","registry":true,"raw":"@dcloudio/uni-stat@next","name":"@dcloudio/uni-stat","escapedName":"@dcloudio%2funi-stat","scope":"@dcloudio","rawSpec":"next","saveSpec":null,"fetchSpec":"next"},"_requiredBy":["#USER","/","/@dcloudio/vue-cli-plugin-uni"],"_resolved":"https://registry.npmjs.org/@dcloudio/uni-stat/-/uni-stat-2.0.0-23320190923002.tgz","_shasum":"0c400c140ca0b3c05f52d25f11583cf05a0c4e9a","_spec":"@dcloudio/uni-stat@next","_where":"/Users/fxy/Documents/DCloud/HbuilderX-plugins/release/uniapp-cli","author":"","bugs":{"url":"https://github.com/dcloudio/uni-app/issues"},"bundleDependencies":false,"deprecated":false,"description":"","devDependencies":{"@babel/core":"^7.5.5","@babel/preset-env":"^7.5.5","eslint":"^6.1.0","rollup":"^1.19.3","rollup-plugin-babel":"^4.3.3","rollup-plugin-clear":"^2.0.7","rollup-plugin-commonjs":"^10.0.2","rollup-plugin-copy":"^3.1.0","rollup-plugin-eslint":"^7.0.0","rollup-plugin-json":"^4.0.0","rollup-plugin-node-resolve":"^5.2.0","rollup-plugin-replace":"^2.2.0","rollup-plugin-uglify":"^6.0.2"},"files":["dist","package.json","LICENSE"],"gitHead":"fed4c73fb9142a1b277dd79313939cad90693d3e","homepage":"https://github.com/dcloudio/uni-app#readme","license":"Apache-2.0","main":"dist/index.js","name":"@dcloudio/uni-stat","repository":{"type":"git","url":"git+https://github.com/dcloudio/uni-app.git","directory":"packages/uni-stat"},"scripts":{"build":"NODE_ENV=production rollup -c rollup.config.js","dev":"NODE_ENV=development rollup -w -c rollup.config.js"},"version":"2.0.0-23320190923002"};
 
 /***/ }),
 /* 7 */
@@ -8404,7 +8400,7 @@ module.exports = {"_from":"@dcloudio/uni-stat@next","_id":"@dcloudio/uni-stat@2.
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var _default = { "pages": { "pages/tabbar/tabbar-1/tabbar-1": { "navigationBarTitleText": "首页" }, "pages/tabbar/tabbar-2/tabbar-2": { "navigationBarTitleText": "作业中" }, "pages/tabbar/tabbar-3/tabbar-3": {}, "pages/tabbar/tabbar-4/tabbar-4": {}, "pages/tabbar/tabbar-5/tabbar-5": { "navigationBarTitleText": "我的" }, "pages/tabbar-3-detial/tabbar-3-xiche/tabbar-3-xiche": {}, "pages/tabbar-3-detial/tabbar-3-meirong/tabbar-3-meirong": {}, "pages/tabbar-3-detial/tabbar-3-qa/tabbar-3-qa": {} }, "globalStyle": { "navigationBarTextStyle": "black", "navigationBarTitleText": "黄白格", "navigationBarBackgroundColor": "#F8F8F8", "backgroundColor": "#F8F8F8" } };exports.default = _default;
+Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var _default = { "pages": { "pages/login/login": { "navigationBarTitleText": "登录" }, "pages/tabbar/tabbar-1/tabbar-1": { "navigationBarTitleText": "首页" }, "pages/tabbar/tabbar-2/tabbar-2": { "navigationBarTitleText": "作业中" }, "pages/tabbar/tabbar-3/tabbar-3": {}, "pages/tabbar/tabbar-4/tabbar-4": {}, "pages/tabbar/tabbar-5/tabbar-5": { "navigationBarTitleText": "我的" }, "pages/tabbar-3-detial/tabbar-3-xiche/tabbar-3-xiche": {}, "pages/tabbar-3-detial/tabbar-3-meirong/tabbar-3-meirong": {}, "pages/tabbar-3-detial/tabbar-3-qa/tabbar-3-qa": {}, "pages/register/register": { "navigationBarTitleText": "注册" } }, "globalStyle": { "navigationBarTextStyle": "black", "navigationBarTitleText": "黄白格", "navigationBarBackgroundColor": "#F8F8F8", "backgroundColor": "#F8F8F8" } };exports.default = _default;
 
 /***/ }),
 /* 8 */
@@ -8536,6 +8532,173 @@ function normalizeComponent (
 /* 19 */,
 /* 20 */,
 /* 21 */
+/*!******************************************************************************!*\
+  !*** C:/Snow/Go/src/github.com/linbaozhong/car-care/app/common/js/helper.js ***!
+  \******************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* WEBPACK VAR INJECTION */(function(uni) {var baseUrl = {
+  host: '127.0.0.1',
+  port: 8080,
+  protocol: 'http:',
+  appId: 3 };
+
+
+var SESSION_KEY = 'SESSION_USER';
+var APP_DATA = getApp().globalData;
+APP_DATA.session = null;
+//
+var session = {};
+
+var getUrl = function getUrl(path, auto) {
+  session = APP_DATA.session || session;
+  return baseUrl.protocol + '//' + baseUrl.host + ':' + baseUrl.port + path + '?tk=' + (
+  auto ? session.auto || '' : session.token || '');
+};
+
+var ajax = {
+  get: function get(url, data, callback) {
+    return uni.request({
+      url: getUrl(url),
+      data: data,
+      method: 'GET',
+      success: function success(res) {
+        if (res.statusCode === 200) {
+          callback(res.data);
+          return;
+        }
+        callback({
+          success: false,
+          error: {
+            code: res.statusCode,
+            detail: res.errMsg } });
+
+
+      },
+      fail: function fail(err) {
+        callback({
+          success: false,
+          error: err });
+
+      } });
+
+  },
+  post: function post(url, data, callback) {
+    return uni.request({
+      url: getUrl(url),
+      data: data,
+      method: 'POST',
+      header: {
+        'content-type': 'application/x-www-form-urlencoded' },
+
+      success: function success(res) {
+        if (res.statusCode === 200) {
+          callback(res.data);
+          return;
+        }
+        callback({
+          success: false,
+          error: {
+            code: res.statusCode,
+            detail: res.errMsg } });
+
+
+      },
+      fail: function fail(err) {
+        callback({
+          success: false,
+          error: err });
+
+      } });
+
+  } };
+
+
+var login = function login() {var callback = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : null;
+  var provider = '';
+
+  provider = 'weixin';
+
+
+  uni.login({
+    provider: provider,
+    success: function success(res) {
+      if (res.code) {
+        ajax.get('/v1/weixin/login', {
+          code: res.code },
+        function (res) {
+          if (res.success) {
+            setSession(res.data, callback);
+          }
+        });
+      }
+    } });
+
+};
+
+var getSession = function getSession() {
+  try {
+    return Object.assign({
+      key: SESSION_KEY },
+    JSON.parse(uni.getStorageSync(SESSION_KEY)));
+  } catch (e) {}
+  return null;
+};
+var setSession = function setSession(data, callback) {
+  if (session) {
+    session = Object.assign({}, session, data);
+  } else {
+    session = data;
+  }
+  uni.setStorage({
+    key: SESSION_KEY,
+    data: JSON.stringify(session),
+    success: function success(res) {
+      APP_DATA.session = session;
+      if (callback) {
+        callback(APP_DATA.session);
+      }
+    },
+    fail: function fail(err) {
+      // console.log(err)
+    } });
+
+};
+
+var delSession = function delSession() {
+  uni.removeStorage({
+    key: SESSION_KEY });
+
+};
+
+var initSession = function initSession() {
+  if (APP_DATA.session != null) {
+    return;
+  }
+  APP_DATA.session = getSession();
+  console.log(APP_DATA.session);
+  if (APP_DATA.session != null) {
+    return;
+  }
+  uni.reLaunch({
+    url: '../../login/login' });
+
+};
+
+module.exports = {
+  getSession: getSession,
+  login: login,
+  setSession: setSession,
+  delSession: delSession,
+  initSession: initSession,
+  ajax: ajax,
+  APP_DATA: APP_DATA };
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 1)["default"]))
+
+/***/ }),
+/* 22 */
 /*!****************************************************************************!*\
   !*** C:/Snow/Go/src/github.com/linbaozhong/car-care/app/common/js/util.js ***!
   \****************************************************************************/
@@ -8616,7 +8779,7 @@ var dateUtils = {
     var _format = function _format(number) {
       return number < 10 ? '0' + number : number;
     };
-    return date.getFullYear() + '/' + _format(date.getMonth() + 1) + '/' + _format(date.getDay()) + '-' +
+    return date.getFullYear() + '/' + _format(date.getMonth() + 1) + '/' + _format(date.getDay()) + ' ' +
     _format(date.getHours()) + ':' + _format(date.getMinutes());
   },
   parse: function parse(str) {//将"yyyy-mm-dd HH:MM:ss"格式的字符串，转化为一个Date对象
@@ -8652,7 +8815,11 @@ function isMobile(d) {
 function isPassword(d) {
   return d.match(/^\d{4}$/);
 }
-
+//格式化车牌号
+function plateFormat(m) {
+  if (!m || m === '') return '';
+  return m.slice(0, 2) + ' · ' + m.slice(2);
+}
 module.exports = {
   isPassword: isPassword,
   isMobile: isMobile,
@@ -8661,6 +8828,7 @@ module.exports = {
   formatTime: formatTime,
   formatLocation: formatLocation,
   dateUtils: dateUtils,
+  plateFormat: plateFormat,
   getDuration: getDuration };
 
 /***/ })
