@@ -34,6 +34,7 @@
 			};
 		},
 		onLoad() {
+			helper.initSession()
 			if (!helper.APP_DATA.session) {
 				return
 			}
@@ -92,9 +93,9 @@
 
 <style lang="scss">
 	.input-group{
-		margin: 0 20upx;
+		margin: 0 20rpx;
 		m-input{
-			min-height: 84upx;
+			min-height: 84rpx;
 		}
 	}
 	.action-row {
@@ -105,7 +106,7 @@
 
 	.action-row navigator {
 		color: #007aff;
-		padding: 0 20upx;
+		padding: 0 20rpx;
 	}
 
 </style>

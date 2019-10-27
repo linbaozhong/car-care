@@ -175,7 +175,8 @@ var _util = _interopRequireDefault(__webpack_require__(/*! @/common/js/util.js *
 //
 //
 //
-var mInput = function mInput() {return __webpack_require__.e(/*! import() | components/m-input */ "components/m-input").then(__webpack_require__.bind(null, /*! @/components/m-input.vue */ 91));};var _default = { components: { mInput: mInput }, data: function data() {return { mobile: '', pwd: '' };}, onLoad: function onLoad() {if (!_helper.default.APP_DATA.session) {return;}_helper.default.APP_DATA.session = _helper.default.getSession();if (_helper.default.APP_DATA.session) {uni.reLaunch({ url: '../tabbar/tabbar-1/tabbar-1' });return;
+var mInput = function mInput() {return __webpack_require__.e(/*! import() | components/m-input */ "components/m-input").then(__webpack_require__.bind(null, /*! @/components/m-input.vue */ 71));};var _default = { components: { mInput: mInput }, data: function data() {return { mobile: '', pwd: '' };}, onLoad: function onLoad() {_helper.default.initSession();if (!_helper.default.APP_DATA.session) {return;}_helper.default.APP_DATA.session = _helper.default.getSession();if (_helper.default.APP_DATA.session) {uni.reLaunch({ url: '../tabbar/tabbar-1/tabbar-1' });
+      return;
     }
   },
   methods: {

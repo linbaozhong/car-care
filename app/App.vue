@@ -32,7 +32,7 @@
 	page {
 		min-height: 100%;
 		display: flex;
-		font-size: 28upx;
+		font-size: 28rpx;
 	}
 	
 	/* 原生组件模式下需要注意组件外部样式 */
@@ -47,12 +47,12 @@
 		flex: 1;
 		flex-direction: column;
 		background-color: #efeff4;
-		padding: 20upx 0;
+		padding: 20rpx 0;
 	}
 
 	.input-group {
 		background-color: #ffffff;
-		margin: 0 20upx;
+		margin: 0 20rpx;
 		position: relative;
 	}
 
@@ -61,7 +61,7 @@
 		right: 0;
 		top: 0;
 		left: 0;
-		height: 1upx;
+		height: 1rpx;
 		content: '';
 		-webkit-transform: scaleY(.5);
 		transform: scaleY(.5);
@@ -73,7 +73,7 @@
 		right: 0;
 		bottom: 0;
 		left: 0;
-		height: 1upx;
+		height: 1rpx;
 		content: '';
 		-webkit-transform: scaleY(.5);
 		transform: scaleY(.5);
@@ -88,19 +88,19 @@
 
 	.input-row .title {
 		width: 20%;
-		height: 50upx;
-		min-height: 50upx;
-		padding: 15upx 0;
-		padding-left: 30upx;
-		line-height: 50upx;
+		height: 50rpx;
+		min-height: 50rpx;
+		padding: 15rpx 0;
+		padding-left: 30rpx;
+		line-height: 50rpx;
 	}
 
 	.input-row.border::after {
 		position: absolute;
 		right: 0;
 		bottom: 0;
-		left: 15upx;
-		height: 1upx;
+		left: 15rpx;
+		height: 1rpx;
 		content: '';
 		-webkit-transform: scaleY(.5);
 		transform: scaleY(.5);
@@ -108,8 +108,8 @@
 	}
 
 	.btn-row {
-		margin-top: 50upx;
-		padding: 20upx;
+		margin-top: 50rpx;
+		padding: 20rpx;
 	}
 
 	button.primary {

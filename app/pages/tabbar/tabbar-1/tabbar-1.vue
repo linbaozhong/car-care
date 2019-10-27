@@ -187,14 +187,14 @@
 <style lang="scss">
 	.records {
 		background: #FFFFFF;
-		margin-bottom: 20upx;
+		margin-bottom: 20rpx;
 
 		.gray {
 			color: #CCCCCC;
 		}
 
 		.header {
-			padding: 10upx 20upx;
+			padding: 10rpx 20rpx;
 			display: flex;
 			justify-content: space-between;
 			align-items: center;
@@ -203,25 +203,25 @@
 			.logo {
 				display: flex;
 				align-items: center;
-				font-size: 32upx;
+				font-size: 32rpx;
 
 				image {
-					width: 80upx;
-					height: 80upx;
+					width: 80rpx;
+					height: 80rpx;
 				}
 
 				.plate {
-					font-size: 28upx;
+					font-size: 28rpx;
 				}
 			}
 
 			text {
-				margin-left: 10upx;
+				margin-left: 10rpx;
 			}
 		}
 
 		.item {
-			padding: 10upx 30upx;
+			padding: 10rpx 30rpx;
 			display: flex;
 			justify-content: space-between;
 			align-items: center;
@@ -232,14 +232,14 @@
 				align-items: center;
 
 				view {
-					margin: 0 10upx;
+					margin: 0 10rpx;
 				}
 			}
 
 			.left .iconfont {
-				width: 55upx;
-				height: 55upx;
-				font-size: 32upx;
+				width: 55rpx;
+				height: 55rpx;
+				font-size: 32rpx;
 				border: 1px solid #CCCCCC;
 				border-radius: 50%;
 				text-align: center;
@@ -254,7 +254,7 @@
 			}
 
 			.gray {
-				font-size: 24upx;
+				font-size: 24rpx;
 			}
 		}
 	}

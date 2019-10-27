@@ -28,11 +28,11 @@ var (
 	dictLocker       map[int]sync.Locker
 	dictListLocker   map[int]sync.Locker
 	dictCacheKey     = []string{
-		"1_dict_waiguan",
-		"2_dict_neishi",
-		"3_dict_yibiao",
-		"4_dict_qita",
-		"5_dict_shangxian",
+		"1_dict_waiguan",   //外观检查
+		"2_dict_neishi",    //内饰检查
+		"3_dict_yibiao",    //仪表检查
+		"4_dict_qita",      //其他检查
+		"5_dict_shangxian", //上线检查
 	}
 
 	dictBrandsLocker = new(sync.Mutex)

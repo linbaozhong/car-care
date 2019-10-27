@@ -26,11 +26,11 @@
 
 <style lang="scss">
 	.v-tab {
-		height: 80upx;
-		line-height: 80upx;
+		height: 80rpx;
+		line-height: 80rpx;
 		color: $uni-text-color;
 		background: white;
-		box-shadow: 0 2upx 5upx $uni-bg-color-grey;
+		box-shadow: 0 2rpx 5rpx $uni-bg-color-grey;
 		display: flex;
 		justify-content: space-around;
 		align-items: stretch;
@@ -38,7 +38,7 @@
 
 		.action {
 			font-weight: bold;
-			border-bottom: 4upx solid $uni-color-primary;
+			border-bottom: 4rpx solid $uni-color-primary;
 		}
 	}
 </style>

@@ -2,79 +2,70 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e44eb2c9-9bb5-468a-bd40-30cd803157b9" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/controllers/clerk.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/controllers/dict.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/controllers/store.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/controllers/visitor.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/models/clerk.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/models/clerk_info.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/models/dict.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/models/store.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/models/store_qc_settings.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/controllers/series.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/models/series.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/api.exe" beforeDir="false" afterPath="$PROJECT_DIR$/api.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controllers/base.go" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/base.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controllers/brand.go" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/brand.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controllers/object.go" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/lastupdate.tmp" beforeDir="false" afterPath="$PROJECT_DIR$/lastupdate.tmp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/base.go" beforeDir="false" afterPath="$PROJECT_DIR$/models/base.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/object.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/result.go" beforeDir="false" afterPath="$PROJECT_DIR$/models/result.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/brand.go" beforeDir="false" afterPath="$PROJECT_DIR$/models/brand.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/dict.go" beforeDir="false" afterPath="$PROJECT_DIR$/models/dict.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routers/commentsRouter_controllers.go" beforeDir="false" afterPath="$PROJECT_DIR$/routers/commentsRouter_controllers.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routers/router.go" beforeDir="false" afterPath="$PROJECT_DIR$/routers/router.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/swagger/swagger.json" beforeDir="false" afterPath="$PROJECT_DIR$/swagger/swagger.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/swagger/swagger.yml" beforeDir="false" afterPath="$PROJECT_DIR$/swagger/swagger.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../app/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../app/App.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/common/css/iconfont.css" beforeDir="false" afterPath="$PROJECT_DIR$/../app/common/css/iconfont.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/common/css/iconfont.eot" beforeDir="false" afterPath="$PROJECT_DIR$/../app/common/css/iconfont.eot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/common/css/iconfont.svg" beforeDir="false" afterPath="$PROJECT_DIR$/../app/common/css/iconfont.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/common/css/iconfont.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/../app/common/css/iconfont.ttf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/common/css/iconfont.woff" beforeDir="false" afterPath="$PROJECT_DIR$/../app/common/css/iconfont.woff" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/common/css/iconfont.woff2" beforeDir="false" afterPath="$PROJECT_DIR$/../app/common/css/iconfont.woff2" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/common/css/reset.css" beforeDir="false" afterPath="$PROJECT_DIR$/../app/common/css/reset.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/common/js/api.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/common/js/helper.js" beforeDir="false" afterPath="$PROJECT_DIR$/../app/common/js/helper.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../app/common/css/uni.css" beforeDir="false" afterPath="$PROJECT_DIR$/../app/common/css/uni.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../app/components/plate-input.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../app/components/plate-input.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../app/components/uni-collapse-item/uni-collapse-item.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../app/components/uni-collapse-item/uni-collapse-item.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../app/components/uni-grid-item/uni-grid-item.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../app/components/uni-grid-item/uni-grid-item.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../app/components/uni-popup/uni-popup.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../app/components/uni-popup/uni-popup.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../app/components/v-tab/v-tab.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../app/components/v-tab/v-tab.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../app/pages.json" beforeDir="false" afterPath="$PROJECT_DIR$/../app/pages.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../app/pages/login/login.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../app/pages/login/login.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../app/pages/register/register.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../app/pages/register/register.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../app/pages/tabbar-3-detial/tabbar-3-meirong/tabbar-3-meirong.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../app/pages/tabbar-3-detial/tabbar-3-meirong/tabbar-3-meirong.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../app/pages/tabbar-3-detial/tabbar-3-qa/tabbar-3-qa.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../app/pages/tabbar-3-detial/tabbar-3-qa/tabbar-3-qa.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../app/pages/tabbar-3-detial/tabbar-3-xiche/tabbar-3-xiche.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../app/pages/tabbar-3-detial/tabbar-3-xiche/tabbar-3-xiche.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../app/pages/tabbar/tabbar-1/tabbar-1.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../app/pages/tabbar/tabbar-1/tabbar-1.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../app/pages/tabbar/tabbar-2/tabbar-2.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../app/pages/tabbar/tabbar-2/tabbar-2.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../app/pages/tabbar/tabbar-3/tabbar-3.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../app/pages/tabbar/tabbar-3/tabbar-3.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/pages/tabbar/tabbar-4/tabbar-4.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../app/pages/tabbar/tabbar-4/tabbar-4.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../app/pages/tabbar/tabbar-5/tabbar-5.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../app/pages/tabbar/tabbar-5/tabbar-5.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/unpackage/dist/dev/.sourcemap/mp-weixin/common/main.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/../app/unpackage/dist/dev/.sourcemap/mp-weixin/common/main.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/unpackage/dist/dev/.sourcemap/mp-weixin/common/runtime.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/../app/unpackage/dist/dev/.sourcemap/mp-weixin/common/runtime.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../app/uni.scss" beforeDir="false" afterPath="$PROJECT_DIR$/../app/uni.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../app/unpackage/dist/dev/.sourcemap/mp-weixin/common/vendor.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/../app/unpackage/dist/dev/.sourcemap/mp-weixin/common/vendor.js.map" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../app/unpackage/dist/dev/.sourcemap/mp-weixin/components/uni-badge/uni-badge.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/../app/unpackage/dist/dev/.sourcemap/mp-weixin/components/uni-badge/uni-badge.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/unpackage/dist/dev/.sourcemap/mp-weixin/components/uni-popup/uni-popup.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/../app/unpackage/dist/dev/.sourcemap/mp-weixin/components/uni-popup/uni-popup.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/unpackage/dist/dev/.sourcemap/mp-weixin/pages/tabbar-3-detial/tabbar-3-meirong/tabbar-3-meirong.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/../app/unpackage/dist/dev/.sourcemap/mp-weixin/pages/tabbar-3-detial/tabbar-3-meirong/tabbar-3-meirong.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/unpackage/dist/dev/.sourcemap/mp-weixin/pages/tabbar/tabbar-1/tabbar-1.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/../app/unpackage/dist/dev/.sourcemap/mp-weixin/pages/tabbar/tabbar-1/tabbar-1.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../app/unpackage/dist/dev/.sourcemap/mp-weixin/pages/login/login.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/../app/unpackage/dist/dev/.sourcemap/mp-weixin/pages/login/login.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../app/unpackage/dist/dev/.sourcemap/mp-weixin/pages/register/register.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/../app/unpackage/dist/dev/.sourcemap/mp-weixin/pages/register/register.js.map" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../app/unpackage/dist/dev/.sourcemap/mp-weixin/pages/tabbar/tabbar-2/tabbar-2.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/../app/unpackage/dist/dev/.sourcemap/mp-weixin/pages/tabbar/tabbar-2/tabbar-2.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/unpackage/dist/dev/.sourcemap/mp-weixin/pages/tabbar/tabbar-3/tabbar-3.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/../app/unpackage/dist/dev/.sourcemap/mp-weixin/pages/tabbar/tabbar-3/tabbar-3.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/unpackage/dist/dev/.sourcemap/mp-weixin/pages/tabbar/tabbar-4/tabbar-4.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/../app/unpackage/dist/dev/.sourcemap/mp-weixin/pages/tabbar/tabbar-4/tabbar-4.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/unpackage/dist/dev/.sourcemap/mp-weixin/pages/tabbar/tabbar-5/tabbar-5.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/../app/unpackage/dist/dev/.sourcemap/mp-weixin/pages/tabbar/tabbar-5/tabbar-5.js.map" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../app/unpackage/dist/dev/mp-weixin/app.json" beforeDir="false" afterPath="$PROJECT_DIR$/../app/unpackage/dist/dev/mp-weixin/app.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/unpackage/dist/dev/mp-weixin/common/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/../app/unpackage/dist/dev/mp-weixin/common/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/unpackage/dist/dev/mp-weixin/common/main.wxss" beforeDir="false" afterPath="$PROJECT_DIR$/../app/unpackage/dist/dev/mp-weixin/common/main.wxss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/unpackage/dist/dev/mp-weixin/common/runtime.js" beforeDir="false" afterPath="$PROJECT_DIR$/../app/unpackage/dist/dev/mp-weixin/common/runtime.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../app/unpackage/dist/dev/mp-weixin/common/vendor.js" beforeDir="false" afterPath="$PROJECT_DIR$/../app/unpackage/dist/dev/mp-weixin/common/vendor.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../app/unpackage/dist/dev/mp-weixin/components/m-input.js" beforeDir="false" afterPath="$PROJECT_DIR$/../app/unpackage/dist/dev/mp-weixin/components/m-input.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../app/unpackage/dist/dev/mp-weixin/components/plate-input.js" beforeDir="false" afterPath="$PROJECT_DIR$/../app/unpackage/dist/dev/mp-weixin/components/plate-input.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../app/unpackage/dist/dev/mp-weixin/components/plate-input.wxss" beforeDir="false" afterPath="$PROJECT_DIR$/../app/unpackage/dist/dev/mp-weixin/components/plate-input.wxss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../app/unpackage/dist/dev/mp-weixin/components/uni-badge/uni-badge.js" beforeDir="false" afterPath="$PROJECT_DIR$/../app/unpackage/dist/dev/mp-weixin/components/uni-badge/uni-badge.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../app/unpackage/dist/dev/mp-weixin/components/uni-popup/uni-popup.js" beforeDir="false" afterPath="$PROJECT_DIR$/../app/unpackage/dist/dev/mp-weixin/components/uni-popup/uni-popup.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/unpackage/dist/dev/mp-weixin/pages/tabbar-3-detial/tabbar-3-meirong/tabbar-3-meirong.js" beforeDir="false" afterPath="$PROJECT_DIR$/../app/unpackage/dist/dev/mp-weixin/pages/tabbar-3-detial/tabbar-3-meirong/tabbar-3-meirong.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/unpackage/dist/dev/mp-weixin/pages/tabbar-3-detial/tabbar-3-qa/tabbar-3-qa.js" beforeDir="false" afterPath="$PROJECT_DIR$/../app/unpackage/dist/dev/mp-weixin/pages/tabbar-3-detial/tabbar-3-qa/tabbar-3-qa.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/unpackage/dist/dev/mp-weixin/pages/tabbar-3-detial/tabbar-3-xiche/tabbar-3-xiche.js" beforeDir="false" afterPath="$PROJECT_DIR$/../app/unpackage/dist/dev/mp-weixin/pages/tabbar-3-detial/tabbar-3-xiche/tabbar-3-xiche.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../app/unpackage/dist/dev/mp-weixin/pages/login/login.js" beforeDir="false" afterPath="$PROJECT_DIR$/../app/unpackage/dist/dev/mp-weixin/pages/login/login.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../app/unpackage/dist/dev/mp-weixin/pages/register/register.js" beforeDir="false" afterPath="$PROJECT_DIR$/../app/unpackage/dist/dev/mp-weixin/pages/register/register.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../app/unpackage/dist/dev/mp-weixin/pages/tabbar-3-detial/tabbar-3-meirong/tabbar-3-meirong.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../app/unpackage/dist/dev/mp-weixin/pages/tabbar-3-detial/tabbar-3-meirong/tabbar-3-meirong.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../app/unpackage/dist/dev/mp-weixin/pages/tabbar-3-detial/tabbar-3-meirong/tabbar-3-meirong.wxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../app/unpackage/dist/dev/mp-weixin/pages/tabbar-3-detial/tabbar-3-meirong/tabbar-3-meirong.wxss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../app/unpackage/dist/dev/mp-weixin/pages/tabbar-3-detial/tabbar-3-qa/tabbar-3-qa.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../app/unpackage/dist/dev/mp-weixin/pages/tabbar-3-detial/tabbar-3-qa/tabbar-3-qa.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../app/unpackage/dist/dev/mp-weixin/pages/tabbar-3-detial/tabbar-3-qa/tabbar-3-qa.wxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../app/unpackage/dist/dev/mp-weixin/pages/tabbar-3-detial/tabbar-3-qa/tabbar-3-qa.wxss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../app/unpackage/dist/dev/mp-weixin/pages/tabbar-3-detial/tabbar-3-xiche/tabbar-3-xiche.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../app/unpackage/dist/dev/mp-weixin/pages/tabbar-3-detial/tabbar-3-xiche/tabbar-3-xiche.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../app/unpackage/dist/dev/mp-weixin/pages/tabbar-3-detial/tabbar-3-xiche/tabbar-3-xiche.wxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../app/unpackage/dist/dev/mp-weixin/pages/tabbar-3-detial/tabbar-3-xiche/tabbar-3-xiche.wxss" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../app/unpackage/dist/dev/mp-weixin/pages/tabbar/tabbar-1/tabbar-1.js" beforeDir="false" afterPath="$PROJECT_DIR$/../app/unpackage/dist/dev/mp-weixin/pages/tabbar/tabbar-1/tabbar-1.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/unpackage/dist/dev/mp-weixin/pages/tabbar/tabbar-1/tabbar-1.wxml" beforeDir="false" afterPath="$PROJECT_DIR$/../app/unpackage/dist/dev/mp-weixin/pages/tabbar/tabbar-1/tabbar-1.wxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/unpackage/dist/dev/mp-weixin/pages/tabbar/tabbar-1/tabbar-1.wxss" beforeDir="false" afterPath="$PROJECT_DIR$/../app/unpackage/dist/dev/mp-weixin/pages/tabbar/tabbar-1/tabbar-1.wxss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../app/unpackage/dist/dev/mp-weixin/pages/tabbar/tabbar-2/tabbar-2.js" beforeDir="false" afterPath="$PROJECT_DIR$/../app/unpackage/dist/dev/mp-weixin/pages/tabbar/tabbar-2/tabbar-2.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/unpackage/dist/dev/mp-weixin/pages/tabbar/tabbar-2/tabbar-2.wxss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/unpackage/dist/dev/mp-weixin/pages/tabbar/tabbar-3/tabbar-3.js" beforeDir="false" afterPath="$PROJECT_DIR$/../app/unpackage/dist/dev/mp-weixin/pages/tabbar/tabbar-3/tabbar-3.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../app/unpackage/dist/dev/mp-weixin/pages/tabbar/tabbar-2/tabbar-2.wxml" beforeDir="false" afterPath="$PROJECT_DIR$/../app/unpackage/dist/dev/mp-weixin/pages/tabbar/tabbar-2/tabbar-2.wxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../app/unpackage/dist/dev/mp-weixin/pages/tabbar/tabbar-3/tabbar-3.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../app/unpackage/dist/dev/mp-weixin/pages/tabbar/tabbar-3/tabbar-3.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../app/unpackage/dist/dev/mp-weixin/pages/tabbar/tabbar-3/tabbar-3.wxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../app/unpackage/dist/dev/mp-weixin/pages/tabbar/tabbar-3/tabbar-3.wxss" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../app/unpackage/dist/dev/mp-weixin/pages/tabbar/tabbar-4/tabbar-4.js" beforeDir="false" afterPath="$PROJECT_DIR$/../app/unpackage/dist/dev/mp-weixin/pages/tabbar/tabbar-4/tabbar-4.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/unpackage/dist/dev/mp-weixin/pages/tabbar/tabbar-4/tabbar-4.wxss" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../app/unpackage/dist/dev/mp-weixin/pages/tabbar/tabbar-5/tabbar-5.js" beforeDir="false" afterPath="$PROJECT_DIR$/../app/unpackage/dist/dev/mp-weixin/pages/tabbar/tabbar-5/tabbar-5.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/unpackage/dist/dev/mp-weixin/pages/tabbar/tabbar-5/tabbar-5.wxml" beforeDir="false" afterPath="$PROJECT_DIR$/../app/unpackage/dist/dev/mp-weixin/pages/tabbar/tabbar-5/tabbar-5.wxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/unpackage/dist/dev/mp-weixin/pages/tabbar/tabbar-5/tabbar-5.wxss" beforeDir="false" afterPath="$PROJECT_DIR$/../app/unpackage/dist/dev/mp-weixin/pages/tabbar/tabbar-5/tabbar-5.wxss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/unpackage/dist/dev/mp-weixin/project.config.json" beforeDir="false" afterPath="$PROJECT_DIR$/../app/unpackage/dist/dev/mp-weixin/project.config.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/unpackage/dist/dev/mp-weixin/static/img/iconfont.e7cfc966.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../mp/common/js/helper.js" beforeDir="false" afterPath="$PROJECT_DIR$/../mp/common/js/helper.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -85,37 +76,79 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/controllers/store.go">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="114">
-              <caret line="6" column="22" selection-start-line="6" selection-start-column="22" selection-end-line="6" selection-end-column="22" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/controllers/dict.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="152">
-              <caret line="10" selection-start-line="10" selection-end-line="10" />
+            <state relative-caret-position="456">
+              <caret line="26" column="38" selection-start-line="26" selection-start-column="38" selection-end-line="26" selection-end-column="38" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/models/clerk_info.go">
+        <entry file="file://$PROJECT_DIR$/models/brand.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="418">
-              <caret line="22" column="17" selection-start-line="22" selection-start-column="17" selection-end-line="22" selection-end-column="17" />
+            <state relative-caret-position="428">
+              <caret line="49" column="25" selection-start-line="49" selection-start-column="25" selection-end-line="49" selection-end-column="25" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/controllers/brand.go">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="152">
+              <caret line="11" selection-start-line="11" selection-end-line="15" selection-end-column="22" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/controllers/series.go">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="190">
+              <caret line="10" column="20" selection-start-line="10" selection-start-column="20" selection-end-line="10" selection-end-column="20" />
+              <folding>
+                <element signature="e#21#105#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/models/base.go">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="513">
+              <caret line="32" column="20" selection-start-line="32" selection-start-column="20" selection-end-line="32" selection-end-column="20" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/routers/router.go">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="551">
+              <caret line="29" column="35" selection-start-line="29" selection-start-column="35" selection-end-line="29" selection-end-column="35" />
+              <folding>
+                <element signature="e#301#391#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/models/series.go">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="361">
+              <caret line="19" column="39" lean-forward="true" selection-start-line="19" selection-start-column="39" selection-end-line="19" selection-end-column="39" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/controllers/clerk.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="315">
-              <caret line="43" column="26" selection-start-line="43" selection-start-column="26" selection-end-line="43" selection-end-column="26" />
+            <state relative-caret-position="513">
+              <caret line="30" selection-start-line="30" selection-end-line="30" />
               <folding>
                 <element signature="e#21#114#0" expanded="true" />
               </folding>
@@ -124,9 +157,23 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/models/dict.go">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="551">
+              <caret line="33" column="34" selection-start-line="33" selection-start-column="34" selection-end-line="33" selection-end-column="34" />
+              <folding>
+                <element signature="n#!!block;n#createDict#0" />
+                <element signature="n#!!block;n#query#0" />
+                <element signature="n#!!block;n#get#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/controllers/visitor.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1301">
+            <state relative-caret-position="2185">
               <caret line="122" column="24" selection-start-line="122" selection-start-column="24" selection-end-line="122" selection-end-column="24" />
             </state>
           </provider>
@@ -149,14 +196,11 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/controllers/user.go" />
-        <option value="$PROJECT_DIR$/models/brand.go" />
         <option value="$PROJECT_DIR$/controllers/dict.go" />
-        <option value="$PROJECT_DIR$/models/dict.go" />
         <option value="$PROJECT_DIR$/models/store.go" />
         <option value="$PROJECT_DIR$/models/store_qc_settings.go" />
         <option value="$PROJECT_DIR$/controllers/store.go" />
         <option value="$PROJECT_DIR$/models/clerk.go" />
-        <option value="$PROJECT_DIR$/routers/router.go" />
         <option value="$PROJECT_DIR$/models/base.go" />
         <option value="$PROJECT_DIR$/models/clerk_info.go" />
         <option value="$PROJECT_DIR$/controllers/clerk.go" />
@@ -164,14 +208,19 @@
         <option value="$PROJECT_DIR$/controllers/visitor.go" />
         <option value="$PROJECT_DIR$/models/result.go" />
         <option value="$PROJECT_DIR$/controllers/base.go" />
+        <option value="$PROJECT_DIR$/models/dict.go" />
+        <option value="$PROJECT_DIR$/models/brand.go" />
+        <option value="$PROJECT_DIR$/routers/router.go" />
+        <option value="$PROJECT_DIR$/controllers/series.go" />
+        <option value="$PROJECT_DIR$/models/series.go" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-2171" />
-    <option name="y" value="-11" />
-    <option name="width" value="2183" />
-    <option name="height" value="1403" />
+    <option name="x" value="685" />
+    <option name="y" value="-25" />
+    <option name="width" value="1820" />
+    <option name="height" value="1170" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -181,7 +230,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -207,11 +255,6 @@
             <path>
               <item name="api" type="b2602c69:ProjectViewProjectNode" />
               <item name="api" type="462c0819:PsiDirectoryNode" />
-              <item name="swagger" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="api" type="b2602c69:ProjectViewProjectNode" />
-              <item name="api" type="462c0819:PsiDirectoryNode" />
               <item name="tests" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -223,6 +266,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -255,9 +299,10 @@
     </option>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-2167" y="-7" width="1455" height="935" extended-state="6" />
+    <frame x="-7" y="-7" width="2062" height="1126" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.17322835" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1252495" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -270,7 +315,7 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="8" />
       <window_info anchor="bottom" id="Version Control" order="9" />
-      <window_info active="true" anchor="bottom" auto_hide="true" id="Terminal" order="10" sideWeight="0.499002" visible="true" weight="0.32876712" />
+      <window_info anchor="bottom" auto_hide="true" id="Terminal" order="10" sideWeight="0.499002" weight="0.26559356" />
       <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.500998" side_tool="true" weight="0.32897383" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -297,13 +342,6 @@
     <entry file="file://$PROJECT_DIR$/main.go">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/models/dict.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1349">
-          <caret line="75" column="17" selection-start-line="75" selection-start-column="17" selection-end-line="75" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../../../../Zozhe/utils/string.go">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="285">
@@ -322,13 +360,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1159">
           <caret line="173" column="5" selection-start-line="173" selection-start-column="5" selection-end-line="173" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/models/brand.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="20" selection-start-line="20" selection-end-line="21" />
         </state>
       </provider>
     </entry>
@@ -354,23 +385,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/controllers/object.go" />
-    <entry file="file://$PROJECT_DIR$/controllers/brand.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="11" column="11" selection-start-line="11" selection-start-column="11" selection-end-line="11" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/routers/router.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="494">
-          <caret line="30" column="14" selection-start-line="30" selection-start-column="14" selection-end-line="30" selection-end-column="14" />
-          <folding>
-            <element signature="e#301#391#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/swagger/swagger.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="181">
@@ -385,45 +399,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/controllers/store.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="6" column="22" selection-start-line="6" selection-start-column="22" selection-end-line="6" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/controllers/dict.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="10" selection-start-line="10" selection-end-line="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/models/clerk_info.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="418">
-          <caret line="22" column="17" selection-start-line="22" selection-start-column="17" selection-end-line="22" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/controllers/visitor.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1301">
-          <caret line="122" column="24" selection-start-line="122" selection-start-column="24" selection-end-line="122" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/utils/cache.go">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="451">
           <caret line="47" column="16" selection-start-line="47" selection-start-column="16" selection-end-line="47" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/models/base.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="11" column="4" selection-start-line="11" selection-start-column="4" selection-end-line="11" selection-end-column="4" />
         </state>
       </provider>
     </entry>
@@ -441,13 +420,101 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/controllers/store.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="6" column="22" selection-start-line="6" selection-start-column="22" selection-end-line="6" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/clerk_info.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="418">
+          <caret line="22" column="17" selection-start-line="22" selection-start-column="17" selection-end-line="22" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/controllers/clerk.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="43" column="26" selection-start-line="43" selection-start-column="26" selection-end-line="43" selection-end-column="26" />
+        <state relative-caret-position="513">
+          <caret line="30" selection-start-line="30" selection-end-line="30" />
           <folding>
             <element signature="e#21#114#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/dict.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="551">
+          <caret line="33" column="34" selection-start-line="33" selection-start-column="34" selection-end-line="33" selection-end-column="34" />
+          <folding>
+            <element signature="n#!!block;n#createDict#0" />
+            <element signature="n#!!block;n#query#0" />
+            <element signature="n#!!block;n#get#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controllers/visitor.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2185">
+          <caret line="122" column="24" selection-start-line="122" selection-start-column="24" selection-end-line="122" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controllers/dict.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="456">
+          <caret line="26" column="38" selection-start-line="26" selection-start-column="38" selection-end-line="26" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/brand.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="428">
+          <caret line="49" column="25" selection-start-line="49" selection-start-column="25" selection-end-line="49" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controllers/brand.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="11" selection-start-line="11" selection-end-line="15" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controllers/series.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="10" column="20" selection-start-line="10" selection-start-column="20" selection-end-line="10" selection-end-column="20" />
+          <folding>
+            <element signature="e#21#105#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/base.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="513">
+          <caret line="32" column="20" selection-start-line="32" selection-start-column="20" selection-end-line="32" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routers/router.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="551">
+          <caret line="29" column="35" selection-start-line="29" selection-start-column="35" selection-end-line="29" selection-end-column="35" />
+          <folding>
+            <element signature="e#301#391#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/series.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="361">
+          <caret line="19" column="39" lean-forward="true" selection-start-line="19" selection-start-column="39" selection-end-line="19" selection-end-column="39" />
         </state>
       </provider>
     </entry>

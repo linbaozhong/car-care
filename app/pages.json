@@ -19,10 +19,10 @@
 				"navigationBarTitleText": "作业中"
 			}
 		},
-		{
-			"path": "pages/tabbar/tabbar-3/tabbar-3",
-			"style": {}
-		},
+		// {
+		// 	"path": "pages/tabbar/tabbar-3/tabbar-3",
+		// 	"style": {}
+		// },
 		{
 			"path": "pages/tabbar/tabbar-4/tabbar-4",
 			"style": {}
@@ -33,24 +33,29 @@
 				"navigationBarTitleText": "我的"
 			}
 		},
+		// {
+		// 	"path": "pages/tabbar-3-detial/tabbar-3-xiche/tabbar-3-xiche",
+		// 	"style": {}
+		// },
+		// {
+		// 	"path": "pages/tabbar-3-detial/tabbar-3-meirong/tabbar-3-meirong",
+		// 	"style": {}
+		// },
+		// {
+		// 	"path": "pages/tabbar-3-detial/tabbar-3-qa/tabbar-3-qa",
+		// 	"style": {}
+		// }, 
 		{
-			"path": "pages/tabbar-3-detial/tabbar-3-xiche/tabbar-3-xiche",
-			"style": {}
-		},
-		{
-			"path": "pages/tabbar-3-detial/tabbar-3-meirong/tabbar-3-meirong",
-			"style": {}
-		},
-		{
-			"path": "pages/tabbar-3-detial/tabbar-3-qa/tabbar-3-qa",
-			"style": {}
-		}, {
 			"path": "pages/register/register",
 			"style": {
 				"navigationBarTitleText": "注册"
 			}
 		}
-	],
+	    ,{
+            "path" : "pages/order/order",
+            "style" : {}
+        }
+    ],
 	"globalStyle": {
 		"navigationBarTextStyle": "black",
 		"navigationBarTitleText": "黄白格",
@@ -74,21 +79,21 @@
 				"selectedIconPath": "static/img/tabbar/guanzhuactive.png",
 				"text": "作业"
 			},
-			//#ifdef MP-WEIXIN
-			{
-				"pagePath": "pages/tabbar/tabbar-3/tabbar-3",
-				"iconPath": "static/img/tabbar/add.png",
-				"selectedIconPath": "static/img/tabbar/addactive.png",
-				"text": "开单"
-			},
-			//#endif
-			//#ifndef MP-WEIXIN
-			{
-				"pagePath": "pages/tabbar/tabbar-3/tabbar-3",
-				"iconPath": "static/img/tabbar/add.png",
-				"selectedIconPath": "static/img/tabbar/addactive.png"
-			},
-			//#endif
+			// //#ifdef MP-WEIXIN
+			// {
+			// 	"pagePath": "pages/tabbar/tabbar-3/tabbar-3",
+			// 	"iconPath": "static/img/tabbar/add.png",
+			// 	"selectedIconPath": "static/img/tabbar/addactive.png",
+			// 	"text": "开单"
+			// },
+			// //#endif
+			// //#ifndef MP-WEIXIN
+			// {
+			// 	"pagePath": "pages/tabbar/tabbar-3/tabbar-3",
+			// 	"iconPath": "static/img/tabbar/add.png",
+			// 	"selectedIconPath": "static/img/tabbar/addactive.png"
+			// },
+			// //#endif
 			{
 				"pagePath": "pages/tabbar/tabbar-4/tabbar-4",
 				"iconPath": "static/img/tabbar/news.png",

@@ -83,12 +83,12 @@
 		bottom: 0;
 		left: 0;
 		right: 0;
-		height: 430upx;
+		height: 430rpx;
 		border-top:1px solid #C8C7CC;
 		background: #D1D5D9;
 
 		.plate-input-header {
-			height: 70upx;
+			height: 70rpx;
 			background: #F7F7F7;
 			display: flex;
 			justify-content:flex-end;
@@ -97,44 +97,44 @@
 			button{
 				border: none;
 				padding: 0;
-				margin: 0 20upx;
+				margin: 0 20rpx;
 			}
 		}
 
 		.plate-input-body {
 			position: relative;
-			padding: 10upx;
+			padding: 10rpx;
 			overflow:hidden;
 			.plate-input-body-1 .plate-input-body-row{
 				justify-content: center;
 			}
 			.plate-input-body-row {
-				margin: 10upx 0;
+				margin: 10rpx 0;
 				display: flex;
 
 				button {
-					width:66upx ;
-					height: 77upx;
-					line-height: 77upx;
+					width:66rpx ;
+					height: 77rpx;
+					line-height: 77rpx;
 					background: #F7F7F7;
 					padding: 0;
-					margin: 0 6upx;
+					margin: 0 6rpx;
 					border-color: #999999;
 				}
 			}
 
 			.btn-delete {
 				position: absolute;
-				height: 75upx;
-				line-height: 75upx;
-				bottom: 20upx;
-				right: 15upx;
-				padding: 0 15upx;
+				height: 75rpx;
+				line-height: 75rpx;
+				bottom: 20rpx;
+				right: 15rpx;
+				padding: 0 15rpx;
 				background: #F7F7F7;
 				border-color: #999999;
 			}
 			.btn-delete.iconfont{
-				font-size: 60upx;
+				font-size: 60rpx;
 			}
 		}
 	}

@@ -25,6 +25,11 @@ func init() {
 				&controllers.Brand{},
 			),
 		),
+		beego.NSNamespace("/series",
+			beego.NSInclude(
+				&controllers.Series{},
+			),
+		),
 		beego.NSNamespace("/vis",
 			beego.NSInclude(
 				&controllers.Visitor{},

@@ -189,20 +189,20 @@
 
 <style lang="scss">
 	.content {
-		padding: 20upx;
+		padding: 20rpx;
 
 		.item {
-			padding: 20upx 10upx;
-			font-size: 32upx;
-			min-height: 50upx;
-			line-height: 50upx;
+			padding: 20rpx 10rpx;
+			font-size: 32rpx;
+			min-height: 50rpx;
+			line-height: 50rpx;
 			border-bottom: 1px solid $uni-border-color;
 			.sign_url{
-				height: 180upx;
+				height: 180rpx;
 				max-height: 110px;
 			}
 			.vin_url{
-				height: 200upx;
+				height: 200rpx;
 				max-height: 200px;
 			}
 		}
@@ -218,14 +218,14 @@
 			.input-plate-number {
 				position: absolute;
 				top: 0;
-				right: 50upx;
+				right: 50rpx;
 				bottom: 0;
-				left: 50upx;
+				left: 50rpx;
 				display: flex;
 				justify-content: center;
 
 				.input-plate-number-word {
-					width: 90upx;
+					width: 90rpx;
 					flex-shrink: 1;
 				}
 			}
@@ -235,19 +235,19 @@
 		background: #FFFFFF;
 
 		.tools {
-			padding: 10upx 20upx;
-			font-size: 32upx;
+			padding: 10rpx 20rpx;
+			font-size: 32rpx;
 			display: flex;
 			justify-content: space-between;
 			align-items: center;
 			.palette{
 				display: flex;
 				view{
-					width: 40upx;
-					height: 40upx;
+					width: 40rpx;
+					height: 40rpx;
 				}
 				.palette-color{
-					margin-right: 20upx;
+					margin-right: 20rpx;
 				}
 			}
 		}

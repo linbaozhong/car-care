@@ -48,7 +48,7 @@
   display: flex;
 }
 .plate-input .plate-input-body .plate-input-body-row button {
-  width: 66rpx;
+  width: 66rpx ;
   height: 77rpx;
   line-height: 77rpx;
   background: #F7F7F7;

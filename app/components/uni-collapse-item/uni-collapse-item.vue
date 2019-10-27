@@ -164,7 +164,7 @@
 	}
 
 	.uni-collapse-cell__title {
-		padding: 24upx 30upx;
+		padding: 24rpx 30rpx;
 		width: 100%;
 		box-sizing: border-box;
 		flex: 1;
@@ -176,7 +176,7 @@
 	}
 
 	.uni-collapse-cell__title-extra {
-		margin-right: 18upx;
+		margin-right: 18rpx;
 		display: flex;
 		flex-direction: row;
 		justify-content: center;
@@ -184,8 +184,8 @@
 	}
 
 	.uni-collapse-cell__title-img {
-		height: 52upx;
-		width: 52upx
+		height: 52rpx;
+		width: 52rpx
 	}
 
 	.uni-collapse-cell__title-arrow {
@@ -207,7 +207,7 @@
 	}
 
 	.uni-collapse-cell__title-text {
-		font-size: 32upx;
+		font-size: 32rpx;
 		text-overflow: ellipsis;
 		white-space: nowrap;
 		color: inherit;
@@ -223,6 +223,6 @@
 	}
 
 	.uni-collapse-cell__content .view {
-		font-size: 28upx
+		font-size: 28rpx
 	}
 </style>

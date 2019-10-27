@@ -71,6 +71,14 @@ func init() {
 			MethodParams: param.Make(),
 			Params: nil})
 
+	beego.GlobalControllerRouter["github.com/linbaozhong/car-care/api/controllers:Series"] = append(beego.GlobalControllerRouter["github.com/linbaozhong/car-care/api/controllers:Series"],
+		beego.ControllerComments{
+			Method: "Gets",
+			Router: `/gets`,
+			AllowHTTPMethods: []string{"get"},
+			MethodParams: param.Make(),
+			Params: nil})
+
 	beego.GlobalControllerRouter["github.com/linbaozhong/car-care/api/controllers:Visitor"] = append(beego.GlobalControllerRouter["github.com/linbaozhong/car-care/api/controllers:Visitor"],
 		beego.ControllerComments{
 			Method: "Login",

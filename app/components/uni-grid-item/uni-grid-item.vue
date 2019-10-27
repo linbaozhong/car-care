@@ -152,17 +152,17 @@ export default {
 			align-items: center;
 			width: 100%;
 			height: 100%;
-			font-size: 32upx;
+			font-size: 32rpx;
 			color: #666;
-			padding: 20upx 0;
+			padding: 20rpx 0;
 			box-sizing: border-box;
 			.image {
-				width: 50upx;
-				height: 50upx;
+				width: 50rpx;
+				height: 50rpx;
 			}
 			.text {
-				font-size: 26upx;
-				margin-top: 10upx;
+				font-size: 26rpx;
+				margin-top: 10rpx;
 			}
 		}
 		&.uni-grid-item__box-square {
@@ -209,8 +209,8 @@ export default {
 			z-index: 10;
 		}
 		&-dot {
-			width: 20upx;
-			height: 20upx;
+			width: 20rpx;
+			height: 20rpx;
 			background: #ff5a5f;
 			border-radius: 50%;
 		}
@@ -225,12 +225,12 @@ export default {
 			display: flex;
 			justify-content: center;
 			align-items: center;
-			width: 100upx;
-			height: 100upx;
+			width: 100rpx;
+			height: 100rpx;
 			overflow: hidden;
 			.box-image {
-				width: 90upx;
-				// height: 100upx;
+				width: 90rpx;
+				// height: 100rpx;
 			}
 		}
 	}

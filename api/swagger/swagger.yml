@@ -186,6 +186,19 @@ paths:
             $ref: '#/definitions/models.Result'
         "400":
           description: '{object} models.Result'
+  /series/gets:
+    get:
+      tags:
+      - series
+      summary: 读取全部车系列表
+      description: 读取全部车系列表
+      responses:
+        "200":
+          description: ""
+          schema:
+            $ref: '#/definitions/models.Result'
+        "400":
+          description: '{object} models.Result'
   /vis/login:
     post:
       tags:
@@ -246,7 +259,7 @@ definitions:
       code:
         type: string
       data:
-        $ref: '#/definitions/8003.0xc00023cc90.false'
+        $ref: '#/definitions/8582.0xc000276ab0.false'
       message:
         type: string
       status:

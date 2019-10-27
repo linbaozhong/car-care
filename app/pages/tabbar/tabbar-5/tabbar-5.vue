@@ -73,18 +73,18 @@ helper.initSession()
 <style lang="scss">
 	.list {
 		background: #FFFFFF;
-		margin: 20upx 0;
-		padding-left: 30upx;
+		margin: 20rpx 0;
+		padding-left: 30rpx;
 
 		.item {
-			padding: 20upx 20upx 20upx 10upx;
+			padding: 20rpx 20rpx 20rpx 10rpx;
 			display: flex;
 			justify-content: space-between;
 			align-items: center;
 			border-bottom: 1px solid $uni-border-color;
 
 			text {
-				margin-right: 20upx;
+				margin-right: 20rpx;
 			}
 		}
 	}
