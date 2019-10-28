@@ -7,12 +7,11 @@ const baseUrl = {
 
 const SESSION_KEY = 'SESSION_USER'
 const APP_DATA = getApp().globalData
-APP_DATA.session = null
 //
-let session = {}
+// let session = {}
 
 const getUrl = (path, auto) => {
-	session = APP_DATA.session || session
+	let session = APP_DATA.session || {}
 	return baseUrl.protocol + '//' + baseUrl.host + ':' + baseUrl.port + path + '?tk=' + (
 		auto ? (session.auto || '') : (session.token || ''))
 }
@@ -106,16 +105,16 @@ const getSession = () => {
 	return null
 }
 const setSession = (data, callback) => {
-	if (session) {
-		session = Object.assign({}, session, data)
+	if (APP_DATA.session) {
+		APP_DATA.session = Object.assign({}, APP_DATA.session, data)
 	} else {
-		session = data
+		APP_DATA.session = data
 	}
 	uni.setStorage({
 		key: SESSION_KEY,
-		data: JSON.stringify(session),
+		data: JSON.stringify(APP_DATA.session),
 		success(res) {
-			APP_DATA.session = session
+			// APP_DATA.session = session
 			if (callback) {
 				callback(APP_DATA.session)
 			}
@@ -132,19 +131,21 @@ const delSession = () => {
 	})
 }
 
-const initSession = () => {
+const initSession = (url) => {
 	if (APP_DATA.session != null) {
 		return
 	}
 	APP_DATA.session = getSession()
-	console.log(APP_DATA.session)
-	if (APP_DATA.session != null) {
-		return
+
+	if (APP_DATA.session == null) {
+		url = '/pages/login/login'
 	}
 	uni.reLaunch({
-		url: '../../login/login'
+		url: url ? url : '/pages/tabbar/tabbar-1/tabbar-1'
 	})
 }
+
+APP_DATA.session = getSession()
 
 module.exports = {
 	getSession,

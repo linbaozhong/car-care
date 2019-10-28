@@ -1,7 +1,7 @@
 <template>
 	<view class="content">
 		全部作业中的项目（以及按车牌号查找历史作业）
-		<view id="btn-order" @tap="goToPage('../../order/order')">
+		<view id="btn-order" @tap="goToPage('/pages/order/order')">
 			<text class="iconfont icon-baoyang"></text>
 		</view>
 	</view>

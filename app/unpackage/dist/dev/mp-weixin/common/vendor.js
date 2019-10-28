@@ -484,6 +484,7 @@ function wrapper(methodName, method) {
 var todoApis = Object.create(null);
 
 var TODOS = [
+'onTabBarMidButtonTap',
 'subscribePush',
 'unsubscribePush',
 'onPush',
@@ -733,7 +734,7 @@ function initData(vueOptions, context) {
     try {
       data = data.call(context); // 支持 Vue.prototype 上挂的数据
     } catch (e) {
-      if (Object({"NODE_ENV":"development","VUE_APP_PLATFORM":"mp-weixin","BASE_URL":"/"}).VUE_APP_DEBUG) {
+      if (Object({"VUE_APP_PLATFORM":"mp-weixin","NODE_ENV":"development","BASE_URL":"/"}).VUE_APP_DEBUG) {
         console.warn('根据 Vue 的 data 函数初始化小程序 data 失败，请尽量确保 data 函数中不访问 vm 对象，否则可能影响首次数据渲染速度。', data);
       }
     }
@@ -1176,6 +1177,8 @@ function parseBaseApp(vm, _ref3)
 
 
       this.$vm.$scope = this;
+      // vm 上也挂载 globalData
+      this.$vm.globalData = this.globalData;
 
       this.$vm._isMounted = true;
       this.$vm.__call_hook('mounted', args);
@@ -6978,7 +6981,7 @@ function type(obj) {
 
 function flushCallbacks$1(vm) {
     if (vm.__next_tick_callbacks && vm.__next_tick_callbacks.length) {
-        if (Object({"NODE_ENV":"development","VUE_APP_PLATFORM":"mp-weixin","BASE_URL":"/"}).VUE_APP_DEBUG) {
+        if (Object({"VUE_APP_PLATFORM":"mp-weixin","NODE_ENV":"development","BASE_URL":"/"}).VUE_APP_DEBUG) {
             var mpInstance = vm.$scope;
             console.log('[' + (+new Date) + '][' + (mpInstance.is || mpInstance.route) + '][' + vm._uid +
                 ']:flushCallbacks[' + vm.__next_tick_callbacks.length + ']');
@@ -6999,14 +7002,14 @@ function nextTick$1(vm, cb) {
     //1.nextTick 之前 已 setData 且 setData 还未回调完成
     //2.nextTick 之前存在 render watcher
     if (!vm.__next_tick_pending && !hasRenderWatcher(vm)) {
-        if(Object({"NODE_ENV":"development","VUE_APP_PLATFORM":"mp-weixin","BASE_URL":"/"}).VUE_APP_DEBUG){
+        if(Object({"VUE_APP_PLATFORM":"mp-weixin","NODE_ENV":"development","BASE_URL":"/"}).VUE_APP_DEBUG){
             var mpInstance = vm.$scope;
             console.log('[' + (+new Date) + '][' + (mpInstance.is || mpInstance.route) + '][' + vm._uid +
                 ']:nextVueTick');
         }
         return nextTick(cb, vm)
     }else{
-        if(Object({"NODE_ENV":"development","VUE_APP_PLATFORM":"mp-weixin","BASE_URL":"/"}).VUE_APP_DEBUG){
+        if(Object({"VUE_APP_PLATFORM":"mp-weixin","NODE_ENV":"development","BASE_URL":"/"}).VUE_APP_DEBUG){
             var mpInstance$1 = vm.$scope;
             console.log('[' + (+new Date) + '][' + (mpInstance$1.is || mpInstance$1.route) + '][' + vm._uid +
                 ']:nextMPTick');
@@ -7082,7 +7085,7 @@ var patch = function(oldVnode, vnode) {
     });
     var diffData = diff(data, mpData);
     if (Object.keys(diffData).length) {
-      if (Object({"NODE_ENV":"development","VUE_APP_PLATFORM":"mp-weixin","BASE_URL":"/"}).VUE_APP_DEBUG) {
+      if (Object({"VUE_APP_PLATFORM":"mp-weixin","NODE_ENV":"development","BASE_URL":"/"}).VUE_APP_DEBUG) {
         console.log('[' + (+new Date) + '][' + (mpInstance.is || mpInstance.route) + '][' + this._uid +
           ']差量更新',
           JSON.stringify(diffData));
@@ -7490,7 +7493,7 @@ module.exports = g;
 /***/ }),
 /* 4 */
 /*!*********************************************************************!*\
-  !*** C:/Snow/Go/src/github.com/linbaozhong/car-care/app/pages.json ***!
+  !*** D:/snow-go/src/github.com/linbaozhong/car-care/app/pages.json ***!
   \*********************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
@@ -7593,7 +7596,10 @@ var getPlatformName = function getPlatformName() {
 var getPackName = function getPackName() {
   var packName = '';
   if (getPlatformName() === 'wx' || getPlatformName() === 'qq') {
-    packName = uni.getAccountInfoSync().miniProgram.appId || '';
+    // 兼容微信小程序低版本基础库
+    if (uni.canIUse('getAccountInfoSync')) {
+      packName = uni.getAccountInfoSync().miniProgram.appId || '';
+    }
   }
   return packName;
 };
@@ -8205,7 +8211,7 @@ Stat = /*#__PURE__*/function (_Util) {_inherits(Stat, _Util);_createClass(Stat, 
     _this6 = _possibleConstructorReturn(this, _getPrototypeOf(Stat).call(this));
     _this6.instance = null;
     // 注册拦截器
-    if (typeof uni.addInterceptor === 'function') {
+    if (typeof uni.addInterceptor === 'function' && "development" !== 'development') {
       _this6.addInterceptorInit();
       _this6.interceptLogin();
       _this6.interceptShare(true);
@@ -8389,23 +8395,23 @@ main();
 /*! exports provided: _from, _id, _inBundle, _integrity, _location, _phantomChildren, _requested, _requiredBy, _resolved, _shasum, _spec, _where, author, bugs, bundleDependencies, deprecated, description, devDependencies, files, gitHead, homepage, license, main, name, repository, scripts, version, default */
 /***/ (function(module) {
 
-module.exports = {"_from":"@dcloudio/uni-stat@next","_id":"@dcloudio/uni-stat@2.0.0-23320190923002","_inBundle":false,"_integrity":"sha512-MnftsvgOac3q1FCOBPzivbFn8GNQFo7D2DY325HeEZyFCWgx5GEwHpGYjT1PQU6v7DaDn0ruxa3ObdpUIYbmZw==","_location":"/@dcloudio/uni-stat","_phantomChildren":{},"_requested":{"type":"tag","registry":true,"raw":"@dcloudio/uni-stat@next","name":"@dcloudio/uni-stat","escapedName":"@dcloudio%2funi-stat","scope":"@dcloudio","rawSpec":"next","saveSpec":null,"fetchSpec":"next"},"_requiredBy":["#USER","/","/@dcloudio/vue-cli-plugin-uni"],"_resolved":"https://registry.npmjs.org/@dcloudio/uni-stat/-/uni-stat-2.0.0-23320190923002.tgz","_shasum":"0c400c140ca0b3c05f52d25f11583cf05a0c4e9a","_spec":"@dcloudio/uni-stat@next","_where":"/Users/fxy/Documents/DCloud/HbuilderX-plugins/release/uniapp-cli","author":"","bugs":{"url":"https://github.com/dcloudio/uni-app/issues"},"bundleDependencies":false,"deprecated":false,"description":"","devDependencies":{"@babel/core":"^7.5.5","@babel/preset-env":"^7.5.5","eslint":"^6.1.0","rollup":"^1.19.3","rollup-plugin-babel":"^4.3.3","rollup-plugin-clear":"^2.0.7","rollup-plugin-commonjs":"^10.0.2","rollup-plugin-copy":"^3.1.0","rollup-plugin-eslint":"^7.0.0","rollup-plugin-json":"^4.0.0","rollup-plugin-node-resolve":"^5.2.0","rollup-plugin-replace":"^2.2.0","rollup-plugin-uglify":"^6.0.2"},"files":["dist","package.json","LICENSE"],"gitHead":"fed4c73fb9142a1b277dd79313939cad90693d3e","homepage":"https://github.com/dcloudio/uni-app#readme","license":"Apache-2.0","main":"dist/index.js","name":"@dcloudio/uni-stat","repository":{"type":"git","url":"git+https://github.com/dcloudio/uni-app.git","directory":"packages/uni-stat"},"scripts":{"build":"NODE_ENV=production rollup -c rollup.config.js","dev":"NODE_ENV=development rollup -w -c rollup.config.js"},"version":"2.0.0-23320190923002"};
+module.exports = {"_from":"@dcloudio/uni-stat@next","_id":"@dcloudio/uni-stat@2.0.0-23720191024001","_inBundle":false,"_integrity":"sha512-vJEk493Vdb8KueNzR2otzDi23rfyRcQBo/t1R41MwNGPk+AUB94gh10+HVLo98DRcvMzkuVofz3KXTAfEx24iw==","_location":"/@dcloudio/uni-stat","_phantomChildren":{},"_requested":{"type":"tag","registry":true,"raw":"@dcloudio/uni-stat@next","name":"@dcloudio/uni-stat","escapedName":"@dcloudio%2funi-stat","scope":"@dcloudio","rawSpec":"next","saveSpec":null,"fetchSpec":"next"},"_requiredBy":["#USER","/","/@dcloudio/vue-cli-plugin-uni"],"_resolved":"https://registry.npmjs.org/@dcloudio/uni-stat/-/uni-stat-2.0.0-23720191024001.tgz","_shasum":"18272814446a9bc6053bc92666ec7064a1767588","_spec":"@dcloudio/uni-stat@next","_where":"/Users/fxy/Documents/DCloud/HbuilderX-plugins/release/uniapp-cli","author":"","bugs":{"url":"https://github.com/dcloudio/uni-app/issues"},"bundleDependencies":false,"deprecated":false,"description":"","devDependencies":{"@babel/core":"^7.5.5","@babel/preset-env":"^7.5.5","eslint":"^6.1.0","rollup":"^1.19.3","rollup-plugin-babel":"^4.3.3","rollup-plugin-clear":"^2.0.7","rollup-plugin-commonjs":"^10.0.2","rollup-plugin-copy":"^3.1.0","rollup-plugin-eslint":"^7.0.0","rollup-plugin-json":"^4.0.0","rollup-plugin-node-resolve":"^5.2.0","rollup-plugin-replace":"^2.2.0","rollup-plugin-uglify":"^6.0.2"},"files":["dist","package.json","LICENSE"],"gitHead":"a725c04ef762e5df78a9a69d140c2666e0de05fc","homepage":"https://github.com/dcloudio/uni-app#readme","license":"Apache-2.0","main":"dist/index.js","name":"@dcloudio/uni-stat","repository":{"type":"git","url":"git+https://github.com/dcloudio/uni-app.git","directory":"packages/uni-stat"},"scripts":{"build":"NODE_ENV=production rollup -c rollup.config.js","dev":"NODE_ENV=development rollup -w -c rollup.config.js"},"version":"2.0.0-23720191024001"};
 
 /***/ }),
 /* 7 */
 /*!**************************************************************************************!*\
-  !*** C:/Snow/Go/src/github.com/linbaozhong/car-care/app/pages.json?{"type":"style"} ***!
+  !*** D:/snow-go/src/github.com/linbaozhong/car-care/app/pages.json?{"type":"style"} ***!
   \**************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var _default = { "pages": { "pages/login/login": { "navigationBarTitleText": "登录" }, "pages/tabbar/tabbar-1/tabbar-1": { "navigationBarTitleText": "首页" }, "pages/tabbar/tabbar-2/tabbar-2": { "navigationBarTitleText": "作业中" }, "pages/tabbar/tabbar-4/tabbar-4": {}, "pages/tabbar/tabbar-5/tabbar-5": { "navigationBarTitleText": "我的" }, "pages/register/register": { "navigationBarTitleText": "注册" }, "pages/order/order": {} }, "globalStyle": { "navigationBarTextStyle": "black", "navigationBarTitleText": "黄白格", "navigationBarBackgroundColor": "#F8F8F8", "backgroundColor": "#F8F8F8" } };exports.default = _default;
+Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var _default = { "pages": { "pages/login/login": { "navigationBarTitleText": "登录", "usingComponents": { "m-input": "/components/m-input" } }, "pages/tabbar/tabbar-1/tabbar-1": { "navigationBarTitleText": "首页", "usingComponents": { "uni-badge": "/components/uni-badge/uni-badge" } }, "pages/tabbar/tabbar-2/tabbar-2": { "navigationBarTitleText": "作业中", "usingComponents": {} }, "pages/tabbar/tabbar-4/tabbar-4": { "usingComponents": {} }, "pages/tabbar/tabbar-5/tabbar-5": { "navigationBarTitleText": "我的", "usingComponents": {} }, "pages/register/register": { "navigationBarTitleText": "注册", "usingComponents": { "m-input": "/components/m-input" } }, "pages/order/order": { "usingComponents": { "plate_input": "/components/plate-input", "uni-popup": "/components/uni-popup/uni-popup" } } }, "globalStyle": { "navigationBarTextStyle": "black", "navigationBarTitleText": "黄白格", "navigationBarBackgroundColor": "#F8F8F8", "backgroundColor": "#F8F8F8" } };exports.default = _default;
 
 /***/ }),
 /* 8 */
 /*!*************************************************************************************!*\
-  !*** C:/Snow/Go/src/github.com/linbaozhong/car-care/app/pages.json?{"type":"stat"} ***!
+  !*** D:/snow-go/src/github.com/linbaozhong/car-care/app/pages.json?{"type":"stat"} ***!
   \*************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
@@ -8533,7 +8539,7 @@ function normalizeComponent (
 /* 20 */,
 /* 21 */
 /*!******************************************************************************!*\
-  !*** C:/Snow/Go/src/github.com/linbaozhong/car-care/app/common/js/helper.js ***!
+  !*** D:/snow-go/src/github.com/linbaozhong/car-care/app/common/js/helper.js ***!
   \******************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
@@ -8548,12 +8554,11 @@ function normalizeComponent (
 
 var SESSION_KEY = 'SESSION_USER';
 var APP_DATA = getApp().globalData;
-APP_DATA.session = null;
 //
-var session = {};
+// let session = {}
 
 var getUrl = function getUrl(path, auto) {
-  session = APP_DATA.session || session;
+  var session = APP_DATA.session || {};
   return baseUrl.protocol + '//' + baseUrl.host + ':' + baseUrl.port + path + '?tk=' + (
   auto ? session.auto || '' : session.token || '');
 };
@@ -8647,16 +8652,16 @@ var getSession = function getSession() {
   return null;
 };
 var setSession = function setSession(data, callback) {
-  if (session) {
-    session = Object.assign({}, session, data);
+  if (APP_DATA.session) {
+    APP_DATA.session = Object.assign({}, APP_DATA.session, data);
   } else {
-    session = data;
+    APP_DATA.session = data;
   }
   uni.setStorage({
     key: SESSION_KEY,
-    data: JSON.stringify(session),
+    data: JSON.stringify(APP_DATA.session),
     success: function success(res) {
-      APP_DATA.session = session;
+      // APP_DATA.session = session
       if (callback) {
         callback(APP_DATA.session);
       }
@@ -8673,19 +8678,21 @@ var delSession = function delSession() {
 
 };
 
-var initSession = function initSession() {
+var initSession = function initSession(url) {
   if (APP_DATA.session != null) {
     return;
   }
   APP_DATA.session = getSession();
-  console.log(APP_DATA.session);
-  if (APP_DATA.session != null) {
-    return;
+
+  if (APP_DATA.session == null) {
+    url = '/pages/login/login';
   }
   uni.reLaunch({
-    url: '../../login/login' });
+    url: url ? url : '/pages/tabbar/tabbar-1/tabbar-1' });
 
 };
+
+APP_DATA.session = getSession();
 
 module.exports = {
   getSession: getSession,
@@ -8700,7 +8707,7 @@ module.exports = {
 /***/ }),
 /* 22 */
 /*!****************************************************************************!*\
-  !*** C:/Snow/Go/src/github.com/linbaozhong/car-care/app/common/js/util.js ***!
+  !*** D:/snow-go/src/github.com/linbaozhong/car-care/app/common/js/util.js ***!
   \****************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {

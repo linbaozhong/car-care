@@ -3,6 +3,7 @@ package controllers
 import (
 	"fmt"
 	"github.com/astaxie/beego"
+	"github.com/astaxie/beego/logs"
 	jsoniter "github.com/json-iterator/go"
 	"github.com/linbaozhong/car-care/api/models"
 	"github.com/linbaozhong/car-care/api/utils"
@@ -20,6 +21,10 @@ type Base struct {
 	Result    *models.Result
 }
 
+func init()  {
+	logs.SetLogger(logs.AdapterFile, `{"filename":"./logs/dd.log","level":7,"maxlines":0,"maxsize":0,"daily":true,"maxdays":10,"color":true}`)
+	logs.SetLevel(logs.LevelError)
+}
 func (c *Base) Prepare() {
 	c.Result = models.NewResult()
 }

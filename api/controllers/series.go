@@ -1,7 +1,7 @@
 package controllers
 
 import (
-	"github.com/astaxie/beego"
+	"github.com/astaxie/beego/logs"
 	"github.com/linbaozhong/car-care/api/models"
 )
 
@@ -16,7 +16,7 @@ type Series struct {
 func (c *Series) Gets() {
 	beans, e := models.GetAllSeries()
 	if e != nil {
-		beego.Error(e)
+		logs.Error(e)
 		c.Result.Status = -200
 		c.Result.Message = e.Error()
 		return

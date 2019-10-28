@@ -34,14 +34,13 @@
 			};
 		},
 		onLoad() {
-			helper.initSession()
 			if (!helper.APP_DATA.session) {
 				return
 			}
 			helper.APP_DATA.session = helper.getSession()
 			if (helper.APP_DATA.session) {
 				uni.reLaunch({
-					url: '../tabbar/tabbar-1/tabbar-1'
+					url: '/pages/tabbar/tabbar-1/tabbar-1'
 				})
 				return
 			}
@@ -75,7 +74,7 @@
 							});
 							setTimeout(() => {
 								uni.reLaunch({
-									url: '../tabbar/tabbar-1/tabbar-1'
+									url: '/pages/tabbar/tabbar-1/tabbar-1'
 								})
 							}, 1500)
 						})

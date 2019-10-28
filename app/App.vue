@@ -4,15 +4,15 @@
 			session:null,
 		},
 		onLaunch: function() {
-			setTimeout(() => {
-				uni.setTabBarBadge({
-					index: 1,
-					text: '3'
-				});
-				uni.showTabBarRedDot({
-					index: 3
-				});
-			}, 1000);
+			// setTimeout(() => {
+			// 	uni.setTabBarBadge({
+			// 		index: 1,
+			// 		text: '3'
+			// 	});
+			// 	uni.showTabBarRedDot({
+			// 		index: 3
+			// 	});
+			// }, 1000);
 		},
 		onShow: function() {
 			

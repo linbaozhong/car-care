@@ -22,7 +22,7 @@ var (
 
 func init() {
 	var err error
-	db, err = xorm.NewEngine("mysql", "root:123456@/cars?charset=utf8mb4")
+	db, err = xorm.NewEngine("mysql", "root:123456@/car_care?charset=utf8mb4")
 	if err != nil {
 		panic(err)
 	}
