@@ -8406,7 +8406,7 @@ module.exports = {"_from":"@dcloudio/uni-stat@next","_id":"@dcloudio/uni-stat@2.
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var _default = { "pages": { "pages/login/login": { "navigationBarTitleText": "登录", "usingComponents": { "m-input": "/components/m-input" } }, "pages/tabbar/tabbar-1/tabbar-1": { "navigationBarTitleText": "首页", "usingComponents": { "uni-badge": "/components/uni-badge/uni-badge" } }, "pages/tabbar/tabbar-2/tabbar-2": { "navigationBarTitleText": "作业中", "usingComponents": {} }, "pages/tabbar/tabbar-4/tabbar-4": { "usingComponents": {} }, "pages/tabbar/tabbar-5/tabbar-5": { "navigationBarTitleText": "我的", "usingComponents": {} }, "pages/register/register": { "navigationBarTitleText": "注册", "usingComponents": { "m-input": "/components/m-input" } }, "pages/order/order": { "usingComponents": { "plate_input": "/components/plate-input", "uni-popup": "/components/uni-popup/uni-popup" } } }, "globalStyle": { "navigationBarTextStyle": "black", "navigationBarTitleText": "黄白格", "navigationBarBackgroundColor": "#F8F8F8", "backgroundColor": "#F8F8F8" } };exports.default = _default;
+Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var _default = { "pages": { "pages/login/login": { "navigationBarTitleText": "登录" }, "pages/tabbar/tabbar-1/tabbar-1": { "navigationBarTitleText": "首页" }, "pages/tabbar/tabbar-2/tabbar-2": { "navigationBarTitleText": "作业中" }, "pages/tabbar/tabbar-4/tabbar-4": {}, "pages/tabbar/tabbar-5/tabbar-5": { "navigationBarTitleText": "我的" }, "pages/register/register": { "navigationBarTitleText": "注册" }, "pages/order/order": {} }, "globalStyle": { "navigationBarTextStyle": "black", "navigationBarTitleText": "黄白格", "navigationBarBackgroundColor": "#F8F8F8", "backgroundColor": "#F8F8F8" } };exports.default = _default;
 
 /***/ }),
 /* 8 */
@@ -8554,8 +8554,6 @@ function normalizeComponent (
 
 var SESSION_KEY = 'SESSION_USER';
 var APP_DATA = getApp().globalData;
-//
-// let session = {}
 
 var getUrl = function getUrl(path, auto) {
   var session = APP_DATA.session || {};

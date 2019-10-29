@@ -7,8 +7,6 @@ const baseUrl = {
 
 const SESSION_KEY = 'SESSION_USER'
 const APP_DATA = getApp().globalData
-//
-// let session = {}
 
 const getUrl = (path, auto) => {
 	let session = APP_DATA.session || {}
